@@ -1,0 +1,17 @@
+.work-projects {
+    background-color: $shades-blue;
+    .name{
+        color: $light-blue;
+    }
+    .link-number {
+        color: $extra-light-blue;
+    }
+    .project-img {
+        width: 90%;
+    }
+    .card {
+        width: 20rem;
+        background-color: $light-nav;
+        border-radius: 2%;
+    }
+}
