@@ -1,0 +1,53 @@
+.about-me {
+  height: auto;
+  padding: 2rem;
+  background-color: $shades-blue;
+  .fade-in {
+    opacity: 0;
+    transition: opacity 350ms ease-in; 
+    .link-color {
+      color: $light-blue;
+      transition: all 0.25s ease-in-out;
+      &:hover {
+        color: $extra-light-blue;
+      }
+    }
+    .link-number {
+      color: $extra-light-blue;
+    }
+    .description {
+      color: $light-blue;
+    }
+    .name {
+      color: $white;
+    }
+  }
+}
+
+//Observer animation
+.fade-in.appear {
+  opacity: 1;
+} 
+
+.from-left {
+  transform: translateX(-100%);
+}
+
+.from-right {
+  transform: translateX(100%);
+}
+
+.from-left {
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  opacity: 0;
+}
+.from-right {
+  transition: opacity 300ms ease-in, transform 1s ease-in;
+  opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear {
+  transform: translateX(0);
+  opacity: 1;
+}

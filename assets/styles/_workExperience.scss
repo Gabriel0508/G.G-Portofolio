@@ -1,0 +1,38 @@
+.work-experience {
+  margin: 5rem;
+  height: 100vh;
+  background-color: $shades-blue;
+  .name {
+    color: $extra-light-blue;
+  }
+  .link-number {
+    color: $extra-light-blue;
+  }
+  .accordion {
+    width: 50%;
+    margin: auto;
+    .accordion-item {
+      background-color: $shades-blue;
+      .accordion-button {
+        background-color: $blue;
+        color: $light-blue;
+      }
+      .accordion-body {
+        background-color: $light-nav;
+        color: $light-blue;
+      }
+    }
+    .description {
+      color: $light-blue;
+    }
+  }
+}
+
+/*Responsive work-experience section*/
+@media screen and (max-width: 900px) {
+  .work-experience {
+    .accordion {
+      width: 90%;
+    }
+  }
+}

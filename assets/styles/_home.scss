@@ -1,0 +1,43 @@
+.home {
+  height: 90vh;
+  padding: 2rem;
+  background-color: $shades-blue;
+  .greeting {
+    color: $extra-light-blue;
+  }
+  .name {
+    color: $white;
+  }
+  .description {
+    color: $light-blue;
+  }
+  .profile-foto {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 1%;
+    z-index: 1;
+    box-shadow: 1rem 1rem $blue;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: all 0.5s ease;
+    &:hover {
+      border-radius: 0% / 0% 0% 5% 5%;
+      box-shadow: 0.5rem 0.5rem $blue;
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+    }
+  }
+}
+
+
+/*Responsive home-section*/
+@media screen and (max-width: 900px) {
+    .home{
+        padding: none;
+        height: auto;
+        .profile-foto {
+            width: 100%;
+          }
+    }
+  }
