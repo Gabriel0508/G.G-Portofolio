@@ -1,9 +1,18 @@
 .contact {
-    background-color: $shades-blue;
+  width: 50%;
+  margin: auto;
     .name {
         color: $light-blue;
       }
       .link-number {
         color: $extra-light-blue;
     }
+}
+
+@media screen and (max-width: 900px) {
+  .contact {
+    width: 100%;
+    margin: none;
+    padding: 1.5rem;
+  }
 }

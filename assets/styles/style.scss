@@ -39,3 +39,7 @@
     -webkit-filter: blur(.1rem);
     pointer-events: none;
   }
+
+  #blurred {
+    background-color: $shades-blue;
+  }

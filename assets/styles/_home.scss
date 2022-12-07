@@ -1,7 +1,7 @@
 .home {
+  width: 70%;
   height: 90vh;
-  padding: 2rem;
-  background-color: $shades-blue;
+  margin: auto;
   .greeting {
     color: $extra-light-blue;
   }
@@ -12,8 +12,7 @@
     color: $light-blue;
   }
   .profile-foto {
-    width: 50%;
-    object-fit: cover;
+    width: 80%;
     border-radius: 1%;
     z-index: 1;
     box-shadow: 1rem 1rem $blue;
@@ -34,7 +33,8 @@
 /*Responsive home-section*/
 @media screen and (max-width: 900px) {
     .home{
-        padding: none;
+        width: 100%;
+        padding: 1.5rem;
         height: auto;
         .profile-foto {
             width: 100%;

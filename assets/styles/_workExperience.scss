@@ -1,6 +1,7 @@
 .work-experience {
   height: auto;
-  background-color: $shades-blue;
+  width: 60%;
+  margin: auto;
   .name {
     color: $light-blue;
   }
@@ -8,7 +9,7 @@
     color: $extra-light-blue;
   }
   .accordion {
-    width: 50%;
+    width: 100%;
     margin: auto;
     .accordion-item {
       background-color: $shades-blue;
@@ -30,8 +31,13 @@
 /*Responsive work-experience section*/
 @media screen and (max-width: 900px) {
   .work-experience {
+    width: 100%;
+    margin: none;
+    padding: 0 1.5rem;
+    background:  linear-gradient(to bottom, rgba(115, 142, 201, 0.52), rgba(0, 9, 27, 0.73)), url(../images/js.code.jpg)no-repeat no-repeat center;
+    background-size: cover;
     .accordion {
-      width: 90%;
+      width: 100%;
     }
   }
 }

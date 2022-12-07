@@ -108,9 +108,9 @@ nav .containar-fluid .menu .line2 {
   }
 }
 .home {
+  width: 70%;
   height: 90vh;
-  padding: 2rem;
-  background-color: #0a192f;
+  margin: auto;
 }
 .home .greeting {
   color: #00E7FF;
@@ -122,9 +122,7 @@ nav .containar-fluid .menu .line2 {
   color: #B1D0E0;
 }
 .home .profile-foto {
-  width: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 80%;
   border-radius: 1%;
   z-index: 1;
   box-shadow: 1rem 1rem #406882;
@@ -140,7 +138,8 @@ nav .containar-fluid .menu .line2 {
 /*Responsive home-section*/
 @media screen and (max-width: 900px) {
   .home {
-    padding: none;
+    width: 100%;
+    padding: 1.5rem;
     height: auto;
   }
   .home .profile-foto {
@@ -148,29 +147,30 @@ nav .containar-fluid .menu .line2 {
   }
 }
 .about-me {
+  width: 90%;
   height: auto;
+  margin: auto;
   padding: 2rem;
-  background-color: #0a192f;
+}
+.about-me .link-color {
+  color: #B1D0E0;
+  transition: all 0.25s ease-in-out;
+}
+.about-me .link-color:hover {
+  color: #00E7FF;
+}
+.about-me .link-number {
+  color: #00E7FF;
+}
+.about-me .description {
+  color: #B1D0E0;
+}
+.about-me .name {
+  color: #B1D0E0;
 }
 .about-me .fade-in {
   opacity: 0;
   transition: opacity 350ms ease-in;
-}
-.about-me .fade-in .link-color {
-  color: #B1D0E0;
-  transition: all 0.25s ease-in-out;
-}
-.about-me .fade-in .link-color:hover {
-  color: #00E7FF;
-}
-.about-me .fade-in .link-number {
-  color: #00E7FF;
-}
-.about-me .fade-in .description {
-  color: #B1D0E0;
-}
-.about-me .fade-in .name {
-  color: #B1D0E0;
 }
 
 .fade-in.appear {
@@ -201,9 +201,17 @@ nav .containar-fluid .menu .line2 {
   opacity: 1;
 }
 
+/*Responsive about-me-section*/
+@media screen and (max-width: 900px) {
+  .about-me {
+    width: 100%;
+    padding: none;
+  }
+}
 .work-experience {
   height: auto;
-  background-color: #0a192f;
+  width: 60%;
+  margin: auto;
 }
 .work-experience .name {
   color: #B1D0E0;
@@ -212,7 +220,7 @@ nav .containar-fluid .menu .line2 {
   color: #00E7FF;
 }
 .work-experience .accordion {
-  width: 50%;
+  width: 100%;
   margin: auto;
 }
 .work-experience .accordion .accordion-item {
@@ -232,12 +240,20 @@ nav .containar-fluid .menu .line2 {
 
 /*Responsive work-experience section*/
 @media screen and (max-width: 900px) {
+  .work-experience {
+    width: 100%;
+    margin: none;
+    padding: 0 1.5rem;
+    background: linear-gradient(to bottom, rgba(115, 142, 201, 0.52), rgba(0, 9, 27, 0.73)), url(../images/js.code.jpg) no-repeat no-repeat center;
+    background-size: cover;
+  }
   .work-experience .accordion {
-    width: 90%;
+    width: 100%;
   }
 }
 .work-projects {
-  background-color: #0a192f;
+  width: 90%;
+  margin: auto;
 }
 .work-projects .name {
   color: #B1D0E0;
@@ -248,14 +264,44 @@ nav .containar-fluid .menu .line2 {
 .work-projects .project-img {
   width: 90%;
 }
+.work-projects .text-right {
+  float: right;
+  clear: right;
+}
 .work-projects .card {
-  width: 20rem;
+  width: auto;
   background-color: #112240;
   border-radius: 2%;
+  transition: 0.4s;
+}
+.work-projects .card:hover {
+  transform: translate(0, -10px);
+}
+.work-projects .container {
+  width: 80%;
+  margin: auto;
 }
 
+@media screen and (max-width: 900px) {
+  .work-projects {
+    width: 100%;
+    margin: none;
+    padding: 1.5rem;
+  }
+  .work-projects .project-img {
+    width: 100%;
+  }
+  .work-projects .text-right {
+    float: none;
+  }
+  .work-projects .container {
+    width: 100%;
+    margin: none;
+  }
+}
 .contact {
-  background-color: #0a192f;
+  width: 50%;
+  margin: auto;
 }
 .contact .name {
   color: #B1D0E0;
@@ -264,8 +310,12 @@ nav .containar-fluid .menu .line2 {
   color: #00E7FF;
 }
 
-footer {
-  background-color: #0a192f;
+@media screen and (max-width: 900px) {
+  .contact {
+    width: 100%;
+    margin: none;
+    padding: 1.5rem;
+  }
 }
 footer .name {
   color: #B1D0E0;
@@ -303,4 +353,8 @@ footer .link-number {
   filter: blur(0.1rem);
   -webkit-filter: blur(0.1rem);
   pointer-events: none;
+}
+
+#blurred {
+  background-color: #0a192f;
 }/*# sourceMappingURL=style.css.map */

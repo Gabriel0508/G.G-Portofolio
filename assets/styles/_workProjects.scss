@@ -1,23 +1,48 @@
 .work-projects {
-    background-color: $shades-blue;
-    .name{
-        color: $light-blue;
+  width: 90%;
+  margin: auto;
+  .name {
+    color: $light-blue;
+  }
+  .link-number {
+    color: $extra-light-blue;
+  }
+  .project-img {
+    width: 90%;
+  }
+  .text-right {
+    float: right;
+    clear: right;
+  }
+  .card {
+    width: auto;
+    background-color: $light-nav;
+    border-radius: 2%;
+    transition: 0.4s;
+    &:hover {
+      transform: translate(0, -10px);
     }
-    .link-number {
-        color: $extra-light-blue;
-    }
-    .project-img {
-        width: 90%;
-    }
-    .card {
-        width: 20rem;
-        background-color: $light-nav;
-        border-radius: 2%;
-    }
-    
+  }
+  .container {
+    width: 80%;
+    margin: auto;
+  }
 }
 
-
 @media screen and (max-width: 900px) {
-  
+  .work-projects {
+    width: 100%;
+    margin: none;
+    padding: 1.5rem;
+    .project-img {
+      width: 100%;
+    }
+    .text-right {
+      float: none;
+    }
+    .container {
+        width: 100%;
+        margin: none;
+    }
   }
+}
