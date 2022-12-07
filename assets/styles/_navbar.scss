@@ -1,0 +1,103 @@
+nav {
+    background-color: $shades-blue;
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+    .containar-fluid {
+      justify-content: space-around;
+      /*Logo*/
+      .logo-title {
+        color: $extra-light-blue;
+      }
+  
+      /*Menu*/
+      .menu {
+        display: block;
+        cursor: pointer;
+        .line1 {
+          background-color: $extra-light-blue;
+          width: 2rem;
+          height: 0.1rem;
+          transition: all 0.7s ease;
+          margin: 0.3rem;
+        }
+        .line2 {
+          background-color: $extra-light-blue;
+          width: 1.5rem;
+          height: 0.1rem;
+          float: right;
+          transition: all 0.7s ease;
+          margin: 0.3rem;
+        }
+      }
+    }
+  }
+  
+  .menuToggle .line1 {
+    transform: rotate(-45deg) translate(-3px, 7px);
+  }
+  .menuToggle .line2 {
+    transform: rotate(45deg) translate(-5px, 1px);
+  }
+  
+  /*Sidenav*/
+  .sidenav {
+    height: 100vh;
+    width: 20%;
+    right: 0;
+    float: right;
+    z-index: 2;
+    background-color: $light-nav;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    .nav-links {
+      left: 0;
+      top: 0;
+    }
+    .link-color {
+      color: $light-blue;
+      transition: all 0.25s ease-in-out;
+      &:hover {
+        color: $extra-light-blue;
+      }
+    }
+    .link-number {
+      color: $extra-light-blue;
+    }
+    .resume {
+      border: solid 0.1rem $extra-light-blue;
+      border-radius: 5%;
+    }
+    .nav-links li {
+      opacity: 0;
+    }
+  }
+  
+  .sidenav-active {
+    transform: translateX(0%);
+  }
+  
+  //Animation
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+  /*Responsive navbar*/
+  @media screen and (max-width: 900px) {
+    nav {
+      .containar-fluid {
+        justify-content: space-between;
+        padding: 0 1rem;
+      }
+    }
+    .sidenav {
+      width: 80%;
+    }
+  }
