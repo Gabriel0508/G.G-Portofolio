@@ -35,13 +35,13 @@ const navSlide = () => {
   /**
    * Close the side-nav when the user clicks anywhere outside of it
    */
-  window.onclick = function (e) {
-    if (!sidenav.contains(e.target)) {
-      //sidenav.classList.toggle("sidenav-active");
-      // menu.classList.toggle("menuToggle");
-      // section.classList.toggle("is-blurred");
-    }
-  };
+  // window.onclick = function (e) {
+  //   if (!sidenav.contains(e.target)) {
+  //     sidenav.classList.remove("sidenav-active");
+  //     menu.classList.remove("menuToggle");
+  //     section.classList.remove("is-blurred");
+  //   }
+  // };
 };
 navSlide();
 
@@ -51,7 +51,7 @@ navSlide();
 let lastScrollTop;
 const navbar = document.querySelector("nav");
 window.addEventListener("scroll", function () {
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var scrollTop = window.pageYOffset && document.documentElement.scrollTop;
   if (scrollTop > lastScrollTop) {
     navbar.style.top = "-80px";
   } else {
@@ -94,3 +94,19 @@ const appearOnScroll = new IntersectionObserver
   sliders.forEach(slider => {
     appearOnScroll.observe(slider);
   });
+
+  /**
+   * Disable the main section when the sidebar is open
+   */
+   Xrm.Page.getControl("#blurred").setDisabled(false); 
+   function sectiondisable (sectionname, disablestatus)
+   {
+       var ctrlName = Xrm.Page.ui.controls.get();
+       for(var i in ctrlName) {
+            var ctrl = ctrlName[i];
+            var ctrlSection = ctrl.getParent().getName();
+            if (ctrlSection == sectionname) {
+                  ctrl.setDisabled(disablestatus);
+           }
+       }
+   }  // sectiondisable
