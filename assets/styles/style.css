@@ -57,6 +57,7 @@ nav .containar-fluid .menu .line2 {
 .sidenav .link-color {
   color: #B1D0E0;
   transition: all 0.25s ease-in-out;
+  cursor: pointer;
 }
 .sidenav .link-color:hover {
   color: #00E7FF;
@@ -122,7 +123,7 @@ nav .containar-fluid .menu .line2 {
   color: #B1D0E0;
 }
 .home .profile-foto {
-  width: 80%;
+  width: 50%;
   border-radius: 1%;
   z-index: 1;
   box-shadow: 1rem 1rem #406882;
@@ -222,6 +223,7 @@ nav .containar-fluid .menu .line2 {
 .work-experience .accordion {
   width: 100%;
   margin: auto;
+  z-index: 2;
 }
 .work-experience .accordion .accordion-item {
   background-color: #0a192f;
@@ -244,7 +246,7 @@ nav .containar-fluid .menu .line2 {
     width: 100%;
     margin: none;
     padding: 0 1.5rem;
-    background: linear-gradient(to bottom, rgba(115, 142, 201, 0.52), rgba(0, 9, 27, 0.73)), url(../images/js.code.jpg) no-repeat no-repeat center;
+    background: linear-gradient(to bottom, rgba(115, 142, 201, 0.52), rgba(0, 9, 27, 0.73)), url(../images/js.code.jpg) no-repeat center center;
     background-size: cover;
   }
   .work-experience .accordion {
@@ -263,6 +265,15 @@ nav .containar-fluid .menu .line2 {
 }
 .work-projects .project-img {
   width: 90%;
+  border-radius: 1%;
+  box-shadow: 1rem 1rem #406882;
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+}
+.work-projects .project-img:hover {
+  box-shadow: 0.5rem 0.5rem #112240;
+  filter: grayscale(0);
+  transform: scale(1.01);
 }
 .work-projects .text-right {
   float: right;

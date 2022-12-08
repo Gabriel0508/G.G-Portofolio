@@ -26,8 +26,6 @@ const navSlide = () => {
       }
     });
 
-    //navLinks.forEach((link) => (link.onclick = () => sidenav.classList.toggle("sidenav-active")));
-
     //Menu animation
     menu.classList.toggle("menuToggle");
   });
@@ -35,62 +33,82 @@ const navSlide = () => {
   /**
    * Close the side-nav when the user clicks anywhere outside of it
    */
-//   window.onclick = function (e) {
-//     if (!sidenav.contains(e.target)) {
-//       sidenav.classList.toggle("sidenav-active");
-//       menu.classList.remove("menuToggle");
-//       section.classList.toggle("is-blurred");
-//     }
-//   };
+  //   window.onclick = function (e) {
+  //     if (!sidenav.contains(e.target)) {
+  //       sidenav.classList.toggle("sidenav-active");
+  //       menu.classList.remove("menuToggle");
+  //       section.classList.toggle("is-blurred");
+  //     }
+  //   };
 };
 navSlide();
 
 /**
  * Show the navbar on scrolling up
  */
-let lastScrollTop;
 const navbar = document.querySelector("nav");
-window.addEventListener("scroll", function () {
-  var scrollTop = window.pageYOffset && document.documentElement.scrollTop;
-  if (scrollTop > lastScrollTop) {
-    navbar.style.top = "-80px";
-  } else {
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
     navbar.style.top = "0";
+  } else {
+    navbar.style.top = "-3rem";
   }
-  lastScrollTop = scrollTop;
+  prevScrollpos = currentScrollPos;
+}
+/**
+ * Observer Animation
+ */
+const appearOptions = {
+  threshold: 0,
+  rootMargin: "0px 0px -250px 0px",
+};
+const faders = document.querySelectorAll(".fade-in");
+const sliders = document.querySelectorAll(".slide-in");
+const appearOnScroll = new IntersectionObserver(function (
+  entries,
+  appearOnScroll
+) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add("appear");
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+},
+appearOptions);
+
+faders.forEach((fader) => {
+  appearOnScroll.observe(fader);
+});
+
+sliders.forEach((slider) => {
+  appearOnScroll.observe(slider);
 });
 
 /**
- * Observer Animation
-*/
-const appearOptions = {
-  threshold: 0,
-  rootMargin: "0px 0px -250px 0px"
-}
+ * Navigate to html's sections
+ */
+const links = document.querySelectorAll(".navigateTo");
+const sidenav = document.querySelector(".sidenav");
+const section = document.getElementById("blurred");
 
-const faders = document.querySelectorAll(".fade-in");
-const sliders = document.querySelectorAll(".slide-in");
-
-const appearOnScroll = new IntersectionObserver
-(function(
-  entries, 
-  appearOnScroll
-  ) {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        return;
-      } else {
-        entry.target.classList.add("appear");
-        appearOnScroll.unobserve(entry.target);
-      }
-    })
-  }, 
-  appearOptions);
-
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  })
-
-  sliders.forEach(slider => {
-    appearOnScroll.observe(slider);
+links.forEach((item) => {
+  item.addEventListener("click", () => {
+    const el = document.getElementById(item.getAttribute("data-link"));
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
   });
+});
+
+
+//TODO:
+/**
+ * Add animation at work section
+ * Close the sidenav after clicking on one of the link !!
+ * Use mixins
+ * Add keyboard navigation & screen reader
+ * 
+ */

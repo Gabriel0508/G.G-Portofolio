@@ -59,6 +59,7 @@ nav {
   .link-color {
     color: $light-blue;
     transition: all 0.25s ease-in-out;
+    cursor: pointer;
     &:hover {
       color: $extra-light-blue;
     }
