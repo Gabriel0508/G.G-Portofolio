@@ -5,42 +5,100 @@
 @import "./workExperience";
 @import "./workProjects";
 @import "./contact";
-@import "./footer";
+@import "./mixins";
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
 }
 
 /* Scrollbar */
 //width
 ::-webkit-scrollbar {
-    width: .5rem;
-  }
-  //Track
-  ::-webkit-scrollbar-track {
-    background: $shades-blue;
-  }
-  //Handle
-  ::-webkit-scrollbar-thumb {
-    background: $light-blue;
-    border-radius: 1rem;
-  }
-  //Handle on hover
-  ::-webkit-scrollbar-thumb:hover {
-    background: $light-blue;
-  }
+  width: 0.5rem;
+}
+//Track
+::-webkit-scrollbar-track {
+  background: $shades-blue;
+}
+//Handle
+::-webkit-scrollbar-thumb {
+  background: $light-blue;
+  border-radius: 1rem;
+}
+//Handle on hover
+::-webkit-scrollbar-thumb:hover {
+  background: $light-blue;
+}
 
-  //Bg-blurred on opening the side-menu
-  .is-blurred {
-    filter: blur(.1rem);
-    -webkit-filter: blur(.1rem);
-    pointer-events: none;
-  }
+//Bg-blurred on opening the side-menu
+.is-blurred {
+  filter: blur(0.1rem);
+  -webkit-filter: blur(0.1rem);
+  pointer-events: none;
+}
 
-  //Main background
-  #blurred {
-    background-color: $shades-blue;
+//Main background
+#blurred {
+  background-color: $shades-blue;
+}
+
+//Observer animation
+.fade-in {
+  opacity: 0;
+  transition: opacity 350ms ease-in; 
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.from-left {
+  transform: translateX(-100%);
+}
+
+.from-right {
+  transform: translateX(100%);
+}
+
+.from-left {
+  transition: opacity 300ms ease-in, transform 0.75s ease-in;
+  opacity: 0;
+}
+.from-right {
+  transition: opacity 300ms ease-in, transform 0.75s ease-in;
+  opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+//Toast
+.g-toast {
+  right: 0;
+  top: 0;
+  z-index: 1;
+  .toast{
+    border-radius: 5rem;
+    .toast-header {
+     background-color: $white;
+     color: $shades-blue;
+    }
+    .toast-body {
+      background-color: $white;
+      color: $shades-blue;
+    }
   }
+}
+
+/*Responsive*/
+@media screen and (max-width: 900px) {
+  .g-toast{
+    display: none;
+  }
+}

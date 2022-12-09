@@ -33,20 +33,20 @@ const navSlide = () => {
   /**
    * Close the side-nav when the user clicks anywhere outside of it
    */
-  //   window.onclick = function (e) {
-  //     if (!sidenav.contains(e.target)) {
-  //       sidenav.classList.toggle("sidenav-active");
-  //       menu.classList.remove("menuToggle");
-  //       section.classList.toggle("is-blurred");
-  //     }
-  //   };
+    // window.onclick = function (e) {
+    //   if (!sidenav.contains(e.target)) {
+    //     sidenav.classList.toggle("sidenav-active");
+    //     menu.classList.remove("menuToggle");
+    //     section.classList.toggle("is-blurred");
+    //   }
+    // };
 };
 navSlide();
 
 /**
  * Show the navbar on scrolling up
  */
-const navbar = document.querySelector("nav");
+const navbar = document.querySelector("nav"); //TODO: check why the navbar is hidden at section "Other Projects" (open side nav + navbar top hidden)
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
@@ -103,12 +103,28 @@ links.forEach((item) => {
   });
 });
 
-
-//TODO:
 /**
- * Add animation at work section
- * Close the sidenav after clicking on one of the link !!
- * Use mixins
- * Add keyboard navigation & screen reader
- * 
+ * Keyboard navigation
  */
+document.addEventListener("keydown", (e) => {
+  e.preventDefault();
+  if (e.key === 'Tab') {
+    let myAlert = document.querySelector('.toast');
+    let bsAlert = new  bootstrap.Toast(myAlert);
+    bsAlert.show();
+  }else if (e.key === "Home") {
+    window.location.hash = "#home";  //navigate to <home> page
+  }else if (e.key.toLocaleLowerCase() === "r" && e.ctrlKey) {
+    window.location.reload();  //refresh the page
+  }else if (e.key.toLocaleLowerCase() === "a" && e.ctrlKey) {
+    window.location.hash = "#about";  //navigate to <about-me> section
+  }else if (e.key.toLocaleLowerCase() === "e" && e.ctrlKey) {
+    window.location.hash = "#experience";  //navigate to <work-experience> section
+  }else if (e.key.toLocaleLowerCase() === "p" && e.ctrlKey) {
+    window.location.hash = "#work";  //navigate to <work-projects> section
+  }else if (e.key.toLocaleLowerCase() === "c" && e.ctrlKey || e.key === 'End') {
+    window.location.hash = "#contact";  //navigate to <contact> section
+  }
+});
+
+// window.onload = (event)=> {}

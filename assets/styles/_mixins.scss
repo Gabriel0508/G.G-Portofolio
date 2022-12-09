@@ -1,0 +1,15 @@
+@mixin border {
+    border: .1rem solid $extra-light-blue;
+}
+
+@mixin link-border {
+    @include border;
+    background-color: $shades-blue;
+    color: $extra-light-blue;
+    padding: .6rem 1rem;
+    border-radius: 2%;
+    transition: all .25s ease-in-out;
+    &:hover {
+     background-color: $light-nav;
+    }
+}

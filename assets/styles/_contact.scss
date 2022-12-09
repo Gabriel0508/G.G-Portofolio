@@ -1,11 +1,24 @@
+@import "./mixins";
 .contact {
   width: 50%;
+  height: 50vh;
   margin: auto;
     .name {
         color: $light-blue;
       }
       .link-number {
         color: $extra-light-blue;
+    }
+    .fade-in {
+      opacity: 0;
+      transition: opacity 350ms ease-in; 
+    }
+    .mail-link {
+      @include link-border;
+    } 
+    .sm-footer {
+      display: flex;
+      justify-content: space-around;
     }
 }
 
@@ -14,5 +27,8 @@
     width: 100%;
     margin: none;
     padding: 1.5rem;
+    .sm-footer {
+      justify-content: none;
+    }
   }
 }

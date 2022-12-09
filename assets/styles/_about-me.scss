@@ -25,36 +25,6 @@
   }
 }
 
-//Observer animation
-.fade-in.appear {
-  opacity: 1;
-} 
-
-.from-left {
-  transform: translateX(-100%);
-}
-
-.from-right {
-  transform: translateX(100%);
-}
-
-.from-left {
-  transition: opacity 250ms ease-in, transform 400ms ease-in;
-  opacity: 0;
-}
-.from-right {
-  transition: opacity 300ms ease-in, transform 1s ease-in;
-  opacity: 0;
-}
-
-.from-left.appear,
-.from-right.appear {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-
-
 /*Responsive about-me-section*/
 @media screen and (max-width: 900px) {
   .about-me{

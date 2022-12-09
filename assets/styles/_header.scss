@@ -1,10 +1,11 @@
 @import "./variables";
+@import "./mixins";
 $shades-blue: #0a192f;
 
 nav {
   background-color: $shades-blue;
   transition: all 0.5s ease-in-out;
-  z-index: 2;
+  z-index: 1;
   .containar-fluid {
     justify-content: space-around;
     /*Logo*/
@@ -68,8 +69,7 @@ nav {
     color: $extra-light-blue;
   }
   .resume {
-    border: solid 0.1rem $extra-light-blue;
-    border-radius: 5%;
+   @include link-border;
   }
   .nav-links li {
     opacity: 0;

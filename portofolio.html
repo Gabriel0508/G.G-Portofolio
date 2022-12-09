@@ -15,7 +15,8 @@
 
 <body>
     <!--Navbar-->
-    <nav class="w-100 shadow p-2 position-sticky"><!--TODO: check why the navbar is hidden at > "Other Projects" section when opening the sidenav-->
+    <nav class="w-100 shadow p-2 position-sticky">
+        <!--TODO: check why the navbar is hidden at > "Other Projects" section when opening the sidenav-->
         <div class="containar-fluid d-flex align-items-center">
             <div class="logo">
                 <a class="logo-title text-decoration-none fs-4" href="./portofolio.html">G.G</a>
@@ -30,11 +31,16 @@
     <!--Sidenav-->
     <div class="sidenav position-fixed">
         <ul class="nav-links list-unstyled p-1 p-5">
-            <li class="mt-3"><a data-link="about" class="navigateTo link-color text-decoration-none fs-4"><span class="link-number">01.</span> About</a></li>
-            <li class="mt-3"><a data-link="experience" class="navigateTo link-color text-decoration-none fs-4"><span class="link-number">02.</span> Experience</a></li>
-            <li class="mt-3"><a data-link="work" class="navigateTo link-color text-decoration-none fs-4"><span class="link-number">03.</span> Work</a></li>
-            <li class="mt-3"><a data-link="contact" class="navigateTo link-color text-decoration-none fs-4"><span class="link-number">04.</span> Contact</a></li>
-            <li class="mt-5"><a href="/assets/resume/Gabriel_Grad_-_Web_Developer.pdf" target="_blank" class="link-color text-decoration-none fs-4 p-2">Resume</a></li>
+            <li class="mt-3"><a data-link="about" class="navigateTo link-color text-decoration-none fs-4"><span
+                        class="link-number">01.</span> About</a></li>
+            <li class="mt-3"><a data-link="experience" class="navigateTo link-color text-decoration-none fs-4"><span
+                        class="link-number">02.</span> Experience</a></li>
+            <li class="mt-3"><a data-link="work" class="navigateTo link-color text-decoration-none fs-4"><span
+                        class="link-number">03.</span> Work</a></li>
+            <li class="mt-3"><a data-link="contact" class="navigateTo link-color text-decoration-none fs-4"><span
+                        class="link-number">04.</span> Contact</a></li>
+            <li class="mt-5"><a href="/assets/resume/Gabriel_Grad_-_Web_Developer.pdf" target="_blank"
+                    class="resume link-color text-decoration-none fs-4 p-2">Resume</a></li>
             <!--Icons-->
             <span class="d-flex justify-content-between mt-5">
                 <li><a class="link-color text-decoration-none fs-4" href="https://www.instagram.com/gabrielgrad94/"
@@ -50,10 +56,21 @@
     </div>
 
     <main id="blurred">
+        <!--Toast-->
+        <div class="g-toast position-fixed p-5">
+            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <h5 class="fw-bold">Keyboard Navigation</h5>
+                <small></small>
+              </div>
+              <div class="toast-body">On this site it is possible to navigate using the keyboard</div>
+            </div>
+          </div>
+
         <!--Home-->
-        <section class="home overflow-hidden pt-5">
+        <section id="home" class="home overflow-hidden">
             <div class="row mt-5">
-                <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="fade-in col-sm-12 col-md-12 col-lg-6">
                     <div>
                         <h5 class="greeting">Hi, my name is</h5>
                         <h1 class="name">Gabriel Grad</h1>
@@ -70,7 +87,7 @@
                             Please note that I am available immediately.</p>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="fade-in col-sm-12 col-md-12 col-lg-6">
                     <div class="text-center">
                         <img class="profile-foto" src="./assets/images/profil.jpg" alt="profile-foto">
                     </div>
@@ -80,7 +97,7 @@
 
         <!--About me-->
         <section id="about" class="about-me overflow-hidden">
-            <h4 class="name mt-3"><span class="link-number">01.</span> About Me</h4>
+            <h4 class="name fade-in mt-3"><span class="link-number">01.</span> About Me</h4>
             <div class="row">
                 <div class="fade-in col-sm-12 col-md-12 col-lg-6">
                     <div class="mt-5">
@@ -115,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide-in from-right text-center col-sm-12 col-md-12 col-lg-6">
+                <div class="fade-in text-center col-sm-12 col-md-12 col-lg-6">
                     <div class="mt-5 d-flex align-items-center justify-content-between">
                         <img class="" src="./assets/images/html-logo.png" style="width: 10%; height: 11vh;"
                             alt="html" />
@@ -134,13 +151,15 @@
 
         <!--Work-experience-->
         <section id="experience" class="work-experience py-5"><!--TODO: add gradient on the bg-image(responsive)-->
-            <h4 class="name"><span class="link-number">02.</span> Where I've Worked</h4>
-            <div class="accordion accordion-flush mt-5" id="accordionFlushExample"><!--TODO: change the collapsed icon from acordion-->
+            <h4 class="name fade-in"><span class="link-number">02.</span> Where I've Worked</h4>
+            <div class="accordion fade-in accordion-flush mt-5" id="accordionFlushExample">
+                <!--TODO: change the collapsed icon from acordion-->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingOne">
                         <span class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Junior Software Engineer @Accesa.eu <!--TODO: add start and end collaboration date overall-->
+                            Junior Software Engineer @Accesa.eu
+                            <!--TODO: add start and end collaboration date overall-->
                         </span>
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse show"
@@ -268,14 +287,15 @@
 
         <!--Personal Projects-->
         <section id="work" class="work-projects overflow-hidden mt-5">
-            <h4 class="name"><span class="link-number">03.</span> Some Things I've Built</h4>
+            <h4 class="name fade-in"><span class="link-number">03.</span> Some Things I've Built</h4>
             <div class="row g-0 mt-5">
-                <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="slide-in from-left col-sm-12 col-md-12 col-lg-6">
                     <a href="https://watches-online-magazine.netlify.app/" target="_blank">
-                        <img class="project-img" src="./assets/images/1..PNG" alt="watches-magazine"><!--TODO: add hover effect on img-->
+                        <img class="project-img" src="./assets/images/1..PNG"
+                            alt="watches-magazine"><!--TODO: add hover effect on img-->
                     </a>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="slide-in from-right col-sm-12 col-md-12 col-lg-6">
                     <h5 class="link-number text-right">Featured Project</h2>
                         <h1 class="name text-right">Watches Magazine</h1>
                         <p class="name text-right">
@@ -293,7 +313,7 @@
             </div>
 
             <div class="row g-0 mt-5">
-                <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="slide-in from-left col-sm-12 col-md-12 col-lg-6">
                     <h5 class="link-number">Featured Project</h2>
                         <h1 class="name">Gabe Restaurant</h1>
                         <p class="name">
@@ -310,18 +330,19 @@
                             <p>JavaScript</p>
                         </div>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="slide-in from-right col-sm-12 col-md-12 col-lg-6">
                     <a href="#" target="_blank">
-                        <img class="project-img" src="./assets/images/gabe-restaurant.PNG" alt="restaurant"><!--TODO: add hover effect on img-->
+                        <img class="project-img" src="./assets/images/gabe-restaurant.PNG"
+                            alt="restaurant"><!--TODO: add hover effect on img-->
                     </a>
                 </div>
             </div>
 
             <!--Other projects-->
             <div class="container mt-5">
-                <h1 class="text-center link-number">Other Projects</h1>
+                <h1 class="fade-in text-center link-number">Other Projects</h1>
                 <div class="row g-3 mt-5">
-                    <div class="col-sm-6 col-md-auto col-lg-4">
+                    <div class="fade-in col-sm-6 col-md-auto col-lg-4">
                         <div class="card"><!--TODO: use a max-width for the card (responsive)-->
                             <div class="card-body">
                                 <div class="card-title d-flex justify-content-between">
@@ -343,7 +364,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-auto col-lg-4">
+                    <div class="fade-in col-sm-6 col-md-auto col-lg-4">
                         <div class="card">
                             <div class="card-body">
                                 <div class="card-title d-flex justify-content-between">
@@ -366,7 +387,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-auto col-lg-4">
+                    <div class="fade-in col-sm-6 col-md-auto col-lg-4">
                         <div class="card">
                             <div class="card-body">
                                 <div class="card-title d-flex justify-content-between">
@@ -389,7 +410,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-auto col-lg-4">
+                    <div class="fade-in col-sm-6 col-md-auto col-lg-4">
                         <div class="card">
                             <div class="card-body">
                                 <div class="card-title d-flex justify-content-between">
@@ -412,7 +433,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-auto col-lg-4">
+                    <div class="fade-in col-sm-6 col-md-auto col-lg-4">
                         <div class="card">
                             <div class="card-body">
                                 <div class="card-title d-flex justify-content-between">
@@ -435,7 +456,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-auto col-lg-4">
+                    <div class="fade-in col-sm-6 col-md-auto col-lg-4">
                         <div class="card">
                             <div class="card-body">
                                 <div class="card-title d-flex justify-content-between">
@@ -464,25 +485,29 @@
 
         <!--Get in touch-->
         <section id="contact" class="contact py-5">
-            <div class="text-center">
+            <div class="text-center fade-in">
                 <h4 class="link-number">04. Get In Touch</h4>
-                <p class="name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quaerat enim maiores
+                <p class="name py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quaerat enim
+                    maiores
                     a
                     tque et porro ratione commodi soluta natus aperiam adipisci quo, earum eligendi alias nemo excepturi
                     vero. Vitae, ad?</p>
-                <a class="link-number text-decoration-none mt-5" href="mailTo:gabrielgrad94@gmail.com">Say Hello</a><!--TODO: add a border line-->
+                <a class="mail-link text-decoration-none" href="mailTo:gabrielgrad94@gmail.com">Say
+                    Hello</a><!--TODO: add a border line-->
+            </div>
+
+            <div class="sm-footer mt-5">
+                <p class="name">Designed by:
+                    <a href="https://www.linkedin.com/in/anda-gheorghe/" target="_blank" title="LinkedIn"
+                        class="link-number text-decoration-none">Anda Gheorghe</a>
+                </p>
+                <p class="name">Built by: <span class="link-number">Gabriel Grad</span></p>
+                <!--TODO: add link to the profil-->
             </div>
         </section>
-
-        <!--Footer-->   
-        <!-- <footer class="footer mt-5">
-            <div class="text-center">
-                <p class="name">Designed by: <span class="link-number">Anda Gheorghe</span></p><!--TODO: add link to the profil-->
-                <!--<p class="name">Built by: <span class="link-number">Grad Gabriel</span></p><!--TODO: add link to the profil-->
-            <!--</div>
-        </footer> -->
     </main>
     <script src="./assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="./portofolio.js"></script>
 </body>
+
 </html>

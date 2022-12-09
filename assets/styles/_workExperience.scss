@@ -27,6 +27,10 @@
       color: $light-blue;
     }
   }
+  .fade-in {
+    opacity: 0;
+    transition: opacity 350ms ease-in; 
+  }
 }
 
 /*Responsive work-experience section*/
