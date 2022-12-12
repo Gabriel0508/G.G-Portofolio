@@ -11,32 +11,17 @@ nav .containar-fluid {
 nav .containar-fluid .logo-title {
   color: #00E7FF;
 }
-nav .containar-fluid .menu {
+nav .containar-fluid .openMenu {
   display: block;
   cursor: pointer;
-}
-nav .containar-fluid .menu .line1 {
-  background-color: #00E7FF;
-  width: 2rem;
-  height: 0.1rem;
+  color: #00E7FF;
   transition: all 0.7s ease;
-  margin: 0.3rem;
 }
-nav .containar-fluid .menu .line2 {
-  background-color: #00E7FF;
-  width: 1.5rem;
-  height: 0.1rem;
-  float: right;
+nav .containar-fluid .closeMenu {
+  display: none;
+  cursor: pointer;
+  color: #00E7FF;
   transition: all 0.7s ease;
-  margin: 0.3rem;
-}
-
-.menuToggle .line1 {
-  transform: rotate(-45deg) translate(-3px, 7px);
-}
-
-.menuToggle .line2 {
-  transform: rotate(45deg) translate(-5px, 1px);
 }
 
 /*Sidenav*/
@@ -121,6 +106,9 @@ nav .containar-fluid .menu .line2 {
   margin: auto;
   padding-top: 3rem;
 }
+.home .bg-checkbox .fa-sun, .home .bg-checkbox .fa-moon {
+  color: #FFFFFF;
+}
 .home .greeting {
   color: #00E7FF;
 }
@@ -134,13 +122,12 @@ nav .containar-fluid .menu .line2 {
   width: 50%;
   border-radius: 1%;
   z-index: 2;
-  box-shadow: 1rem 1rem #406882;
   filter: grayscale(100%);
   transition: all 0.5s ease;
+  box-shadow: #B1D0E0 5px 5px, #B1D0E0 10px 10px;
 }
 .home .profile-foto:hover {
-  border-radius: 0%/0% 0% 5% 5%;
-  box-shadow: 0.5rem 0.5rem #406882;
+  box-shadow: none;
   filter: grayscale(0);
 }
 
@@ -219,6 +206,15 @@ nav .containar-fluid .menu .line2 {
 .work-experience .accordion .description {
   color: #B1D0E0;
 }
+.work-experience .accordion .skills-btn {
+  display: flex;
+}
+.work-experience .accordion .skills-btn .btn {
+  background-color: #406882;
+  color: #B1D0E0;
+  border-radius: 5rem;
+  padding: 0.5rem 2rem;
+}
 .work-experience .fade-in {
   opacity: 0;
   transition: opacity 350ms ease-in;
@@ -236,6 +232,9 @@ nav .containar-fluid .menu .line2 {
   .work-experience .accordion {
     width: 100%;
   }
+  .work-experience .accordion .skills-btn {
+    display: none;
+  }
 }
 .work-projects {
   width: 90%;
@@ -250,12 +249,10 @@ nav .containar-fluid .menu .line2 {
 .work-projects .project-img {
   width: 90%;
   border-radius: 1%;
-  box-shadow: 1rem 1rem #406882;
   filter: grayscale(100%);
   transition: all 0.5s ease;
 }
 .work-projects .project-img:hover {
-  box-shadow: 0.5rem 0.5rem #112240;
   filter: grayscale(0);
   transform: scale(1.01);
 }

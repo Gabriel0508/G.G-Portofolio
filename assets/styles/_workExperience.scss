@@ -26,6 +26,12 @@
     .description {
       color: $light-blue;
     }
+    .skills-btn{
+      display: flex;
+      .btn {
+        @include btn-static;
+      }
+    }
   }
   .fade-in {
     opacity: 0;
@@ -43,6 +49,9 @@
     background-size: cover;
     .accordion {
       width: 100%;
+      .skills-btn {
+        display: none;
+      }
     }
   }
 }

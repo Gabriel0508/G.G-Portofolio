@@ -2,45 +2,59 @@
 /**
  * Method to animate the navigation bar and the side menu
  */
-const navSlide = () => {
-  const menu = document.querySelector(".menu");
+const navSlide = () => { //TODO: create functions overall
+  //const menu = document.querySelector(".menu");
+    const openMenu = document.querySelector(".openMenu");
+    const closeMenu = document.querySelector(".closeMenu");
   const sidenav = document.querySelector(".sidenav");
   const navLinks = document.querySelectorAll(".nav-links li");
   const section = document.getElementById("blurred");
   const body = document.querySelector("body");
+  const links = document.querySelectorAll(".navigateTo");
 
-  menu.addEventListener("click", () => {
+  openMenu.addEventListener("click", () => {
     //Toggle nav
-    sidenav.classList.toggle("sidenav-active");
+    //sidenav.classList.toggle("sidenav-active");
+    sidenav.classList.add('sidenav-active');
+    openMenu.style.display = "none";
+    closeMenu.style.display = "block";
+    body.style.overflow = "hidden";
+    section.classList.add("is-blurred");
 
     //Animate nav links
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
         link.style.animation = "";
-        body.style.overflow = "visible";
-        section.classList.remove("is-blurred");
       } else {
         link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-        body.style.overflow = "hidden";
-        section.classList.add("is-blurred");
       }
     });
 
+    //Navigate to html's sections
+    links.forEach((item) => {
+      item.addEventListener("click", () => {
+        const el = document.getElementById(item.getAttribute("data-link"));
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        section.classList.remove("is-blurred");
+        sidenav.classList.remove("sidenav-active");
+        body.style.overflow = "visible";
+        closeMenu.style.display = "none";
+        openMenu.style.display = "block";
+      });
+    });
+
     //Menu animation
-    menu.classList.toggle("menuToggle");
+   // menu.classList.toggle("menuToggle");
   });
 
-  /**
-   * Close the side-nav when the user clicks anywhere outside of it
-   */
-    // window.onclick = function (e) {
-    //   if (!sidenav.contains(e.target)) {
-    //     sidenav.classList.toggle("sidenav-active");
-    //     menu.classList.remove("menuToggle");
-    //     section.classList.toggle("is-blurred");
-    //   }
-    // };
-};
+  closeMenu.addEventListener("click", () => {
+    sidenav.classList.remove('sidenav-active');
+    closeMenu.style.display = "none";
+    openMenu.style.display = "block";
+    body.style.overflow = "visible";
+    section.classList.remove("is-blurred");
+  })
+}
 navSlide();
 
 /**
@@ -90,25 +104,17 @@ sliders.forEach((slider) => {
 });
 
 /**
- * Navigate to html's sections
- */
-const links = document.querySelectorAll(".navigateTo");
-const sidenav = document.querySelector(".sidenav");
-const section = document.getElementById("blurred");
-
-links.forEach((item) => {
-  item.addEventListener("click", () => {
-    const el = document.getElementById(item.getAttribute("data-link"));
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
-});
-
-/**
  * Keyboard navigation
  */
+document.querySelector('[tabindex]');
 document.addEventListener("keydown", (e) => {
-  e.preventDefault();
-  if (e.key === 'Tab') {
+ e.preventDefault()
+ if (e.key === 'Tab') {
+    let e = [...document.querySelectorAll('[tabindex]')],
+    i = e.indexOf(document.activeElement) + 1;
+    i = i === e.length ? i = 0 : i;
+    e[i].focus();
+  }else if ([tabindex='1']) {
     let myAlert = document.querySelector('.toast');
     let bsAlert = new  bootstrap.Toast(myAlert);
     bsAlert.show();
@@ -127,4 +133,19 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// window.onload = (event)=> {}
+/**
+ * Show the toast notification
+*/
+  window.onload = () => {
+    let myAlert = document.querySelector('.toast');
+    let bsAlert = new  bootstrap.Toast(myAlert);
+    bsAlert.show();
+  }
+
+// /**
+//  * Change the background color
+//  */
+// const btn = document.getElementById("bg-change");
+// btn.addEventListener("click", () => {
+ //TODO:
+// });

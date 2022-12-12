@@ -19,11 +19,17 @@
         <!--TODO: check why the navbar is hidden at > "Other Projects" section when opening the sidenav-->
         <div class="containar-fluid d-flex align-items-center">
             <div class="logo">
-                <a class="logo-title text-decoration-none fs-4" href="./portofolio.html">G.G</a>
+                <a tabindex="0" class="logo-title text-decoration-none fs-4" href="./portofolio.html">G.G</a>
             </div>
-            <div class="menu">
+            <!-- <div tabindex="1" class="menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
+            </div> -->
+            <div class="openMenu">
+                <i class="fa-solid fa-bars fs-3"></i>
+            </div>
+            <div class="closeMenu">
+                <i class="fa-solid fa-xmark fs-2"></i>
             </div>
         </div>
     </nav>
@@ -31,44 +37,57 @@
     <!--Sidenav-->
     <div class="sidenav position-fixed">
         <ul class="nav-links list-unstyled p-1 p-5">
-            <li class="mt-3"><a data-link="about" class="navigateTo link-color text-decoration-none fs-4"><span
+            <li class="mt-3"><a tabindex="2" data-link="about" class="navigateTo link-color text-decoration-none fs-4"><span
                         class="link-number">01.</span> About</a></li>
-            <li class="mt-3"><a data-link="experience" class="navigateTo link-color text-decoration-none fs-4"><span
+            <li class="mt-3"><a tabindex="3" data-link="experience" class="navigateTo link-color text-decoration-none fs-4"><span
                         class="link-number">02.</span> Experience</a></li>
-            <li class="mt-3"><a data-link="work" class="navigateTo link-color text-decoration-none fs-4"><span
+            <li class="mt-3"><a tabindex="4" data-link="work" class="navigateTo link-color text-decoration-none fs-4"><span
                         class="link-number">03.</span> Work</a></li>
-            <li class="mt-3"><a data-link="contact" class="navigateTo link-color text-decoration-none fs-4"><span
+            <li class="mt-3"><a tabindex="5" data-link="contact" class="navigateTo  link-color text-decoration-none fs-4"><span
                         class="link-number">04.</span> Contact</a></li>
-            <li class="mt-5"><a href="/assets/resume/Gabriel_Grad_-_Web_Developer.pdf" target="_blank"
+            <li class="mt-5"><a tabindex="6" href="/assets/resume/Gabriel_Grad_-_Web_Developer.pdf" target="_blank"
                     class="resume link-color text-decoration-none fs-4 p-2">Resume</a></li>
             <!--Icons-->
             <span class="d-flex justify-content-between mt-5">
-                <li><a class="link-color text-decoration-none fs-4" href="https://www.instagram.com/gabrielgrad94/"
+                <li><a tabindex="7" class="link-color text-decoration-none fs-4" href="https://www.instagram.com/gabrielgrad94/"
                         target="_blank"><i class="fa-brands fa-square-instagram" title="Instagram"></i></a></li>
-                <li><a class="link-color text-decoration-none fs-4" href="https://www.linkedin.com/in/gabriel0508/"
+                <li><a tabindex="8" class="link-color text-decoration-none fs-4" href="https://www.linkedin.com/in/gabriel0508/"
                         target="_blank"><i class="fa-brands fa-linkedin" title="LinkedIn"></i></a></li>
-                <li><a class="link-color text-decoration-none fs-4" href="https://github.com/Gabriel0508"
+                <li><a tabindex="9" class="link-color text-decoration-none fs-4" href="https://github.com/Gabriel0508"
                         target="_blank"><i class="fa-brands fa-github" title="Github"></i></a></li>
-                <li><a class="link-color text-decoration-none fs-4" href="mailto:gabrielgrad94@gmail.com"><i
-                            class="fa-solid fa-envelope" title="E-Mail"></i></a></li>
+                <li><a tabindex="10" class="link-color text-decoration-none fs-4" href="mailto:gabrielgrad94@gmail.com"><i
+                        class="fa-solid fa-envelope" data-bs-toggle="tooltip" data-bs-placement="top" title="E-Mail"></i></a></li>
             </span>
         </ul>
     </div>
 
     <main id="blurred">
+        <!--Language-->
+        <!-- <span class="w-100 d-flex align-items-center justify-content-center p-0">
+            <a href="#" class="text-decoration-none text-light mx-1 border-end-0">English</a>
+            <a href="#" class="text-decoration-none text-light mx-1">Deutsch</a>          
+        </span> -->
         <!--Toast-->
         <div class="g-toast position-fixed p-5">
             <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
               <div class="toast-header">
                 <h5 class="fw-bold">Keyboard Navigation</h5>
-                <small></small>
               </div>
-              <div class="toast-body">On this site it is possible to navigate using the keyboard</div>
+              <div class="toast-body">Press on the <b>TAB</b> key to navigate through all links</div>
             </div>
-          </div>
+        </div>
 
         <!--Home-->
         <section id="home" class="home overflow-hidden">
+            <!--Change background color-->
+            <!-- <div class="fade-in bg-checkbox d-flex align-items-center">
+                <i class="fa-regular fa-moon"></i>
+                <div class="form-check form-switch mx-2">
+                    <input class="form-check-input" type="checkbox" id="bg-change">
+                </div>
+                <i class="fa-regular fa-sun"></i>
+            </div> -->
+            <!--Home page-->
             <div class="row mt-5">
                 <div class="fade-in col-sm-12 col-md-12 col-lg-6">
                     <div>
@@ -120,21 +139,16 @@
                                 </li>
                             </ul>
                             <ul class="list-unstyled px-4 slide-in from-left">
-                                <li class="description"><i
-                                        class="fa-solid fa-caret-right link-number m-2"></i>JavaScript
-                                    (ES6+)</li>
-                                <li class="description"><i
-                                        class="fa-solid fa-caret-right link-number m-2"></i>TypeScript
-                                </li>
-                                <li class="description"><i class="fa-solid fa-caret-right link-number m-2"></i>Angular
-                                </li>
+                                <li class="description"><i class="fa-solid fa-caret-right link-number m-2"></i>JavaScript(ES6+)</li>
+                                <li class="description"><i class="fa-solid fa-caret-right link-number m-2"></i>TypeScript</li>
+                                <li class="description"><i class="fa-solid fa-caret-right link-number m-2"></i>Angular</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="fade-in text-center col-sm-12 col-md-12 col-lg-6">
                     <div class="mt-5 d-flex align-items-center justify-content-between">
-                        <img class="" src="./assets/images/html-logo.png" style="width: 10%; height: 11vh;"
+                        <img src="./assets/images/html-logo.png" style="width: 10%; height: 11vh;"
                             alt="html" />
                         <img src="./assets/images/CSS3_logo.svg.png" style="width: 10%; height: 11vh;" alt="css" />
                         <img src="./assets/images/angular-logo.png" style="width: 15%;" alt="angular" />
@@ -155,48 +169,48 @@
             <div class="accordion fade-in accordion-flush mt-5" id="accordionFlushExample">
                 <!--TODO: change the collapsed icon from acordion-->
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingOne">
-                        <span class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    <div class="accordion-header" id="flush-headingOne">
+                        <span tabindex="11" class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                             Junior Software Engineer @Accesa.eu
                             <!--TODO: add start and end collaboration date overall-->
                         </span>
-                    </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse show"
+                    </div>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse show mt-2"
                         aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
+                            <div class="job-place">
+                                <h5><i class="fa-solid fa-location-dot mx-3"></i>Cluj-Napoca, Romania</h4>
+
+                            </div>
                             <p><i class="fa-solid fa-caret-right link-number mx-2"></i>
                                 Developed key features and maintained a large web application using Angular</p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item mt-2">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                        <span class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    <div class="accordion-header" id="flush-headingTwo">
+                        <span  tabindex="12"class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                             Junior UI/Angular Developer @P4B Group
                         </span>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    </div>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse mt-2" aria-labelledby="flush-headingTwo"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <ul class="list-unstyled text-align-start">
-                                <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Developed key
-                                    features and
-                                    maintained a large web application using Angular</li>
+                            <div class="job-place">
+                                <h5><i class="fa-solid fa-location-dot mx-3"></i>Cluj-Napoca, Romania</h4>
+
+                            </div>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Developed key features and maintained a large web application using Angular</li>
                                 <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Defined and
                                     researched product
                                     features as part of the product team</li>
                                 <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Designed and
                                     developed the
                                     Dashboard & Reports page for the customer-facing application
-                                    by following an elaborate design process that included stakeholder interviews, user
-                                    journey, low and high-fidelity prototyping, design and more</li>
-                                <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Designed and
-                                    developed the
-                                    Dashboard & Reports page for the customer-facing application
-                                    by following an elaborate design process that included stakeholder interviews, user
-                                    journey, low and high-fidelity prototyping, design and more</li>
+                                    by following an elaborate design</li>
                                 <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Worked closely
                                     with BE
                                     developers, designers, project managers, etc. as part of an Agile
@@ -208,30 +222,32 @@
                                     making the
                                     application responsive on mobile devices</li>
                             </ul>
-                            <span class="description"><i
-                                    class="fa-solid fa-caret-right link-number mx-2"></i>Angular</span>
-                            <span class="description"><i
-                                    class="fa-solid fa-caret-right link-number mx-2"></i>TypeScript</span>
-                            <span class="description"><i
-                                    class="fa-solid fa-caret-right link-number mx-2"></i>Bootstrap</span>
-                            <span class="description"><i
-                                    class="fa-solid fa-caret-right link-number mx-2"></i>SASS</span>
-                            <span class="description"><i class="fa-solid fa-caret-right link-number mx-2"></i>Git</span>
+                            <div class="skills-btn justify-content-between">
+                                <span class="btn">Angular</span>
+                                <span class="btn">TypeScript</span>
+                                <span class="btn">Bootstrap</span>
+                                <span class="btn">SASS</span>
+                                <span class="btn">Git</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item mt-2">
-                    <h2 class="accordion-header" id="flush-headingThree">
-                        <span class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    <div class="accordion-header" id="flush-headingThree">
+                        <span tabindex="13" class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseThree" aria-expanded="false"
                             aria-controls="flush-collapseThree">
                             Assistant Electrician @Sascha Dörner
                         </span>
-                    </h2>
-                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    </div>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse mt-2"
                         aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <ul class="list-unstyled">
+                            <div class="job-place">
+                                <h5><i class="fa-solid fa-location-dot mx-3"></i>Munich, Germany</h4>
+
+                            </div>
+                            <ul class="list-unstyled mt-3">
                                 <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Transport
                                     tools, materials and
                                     electrical equipment for electrician</li>
@@ -253,17 +269,21 @@
                     </div>
                 </div>
                 <div class="accordion-item mt-2">
-                    <h2 class="accordion-header" id="flush-headingFour">
-                        <span class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    <div class="accordion-header" id="flush-headingFour">
+                        <span tabindex="14" class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseFour" aria-expanded="false"
                             aria-controls="flush-collapseFour">
                             Production Assistant @BMW Group
                         </span>
-                    </h2>
-                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                    </div>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse mt-2" aria-labelledby="flush-headingFour"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <ul class="list-unstyled">
+                            <div class="job-place">
+                                <h5><i class="fa-solid fa-location-dot mx-3"></i>Regensburg / Munich, Germany</h4>
+
+                            </div>
+                            <ul class="list-unstyled mt-3">
                                 <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Assembles
                                     finished product</li>
                                 <li><i class="fa-solid fa-caret-right link-number mx-2"></i>Inspects product to ensure
@@ -290,7 +310,7 @@
             <h4 class="name fade-in"><span class="link-number">03.</span> Some Things I've Built</h4>
             <div class="row g-0 mt-5">
                 <div class="slide-in from-left col-sm-12 col-md-12 col-lg-6">
-                    <a href="https://watches-online-magazine.netlify.app/" target="_blank">
+                    <a tabindex="15" href="https://watches-online-magazine.netlify.app/" target="_blank">
                         <img class="project-img" src="./assets/images/1..PNG"
                             alt="watches-magazine"><!--TODO: add hover effect on img-->
                     </a>
@@ -331,7 +351,7 @@
                         </div>
                 </div>
                 <div class="slide-in from-right col-sm-12 col-md-12 col-lg-6">
-                    <a href="#" target="_blank">
+                    <a tabindex="16" href="#" target="_blank">
                         <img class="project-img" src="./assets/images/gabe-restaurant.PNG"
                             alt="restaurant"><!--TODO: add hover effect on img-->
                     </a>
@@ -348,7 +368,7 @@
                                 <div class="card-title d-flex justify-content-between">
                                     <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/Colossal"
                                         target="_blank" class="link-number fs-3"><i class="fa-solid fa-folder"></i></a>
-                                    <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/Colossal"
+                                    <a tabindex="17" href="https://github.com/Gabriel0508/Small-Websites/tree/main/Colossal"
                                         target="_blank" class="name fs-3" title="Github"><i
                                             class="fa-brands fa-github"></i></a>
                                 </div>
@@ -370,7 +390,7 @@
                                 <div class="card-title d-flex justify-content-between">
                                     <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/Abduzeedo"
                                         target="_blank" class="link-number fs-3"><i class="fa-solid fa-folder"></i></a>
-                                    <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/Abduzeedo"
+                                    <a tabindex="18" href="https://github.com/Gabriel0508/Small-Websites/tree/main/Abduzeedo"
                                         target="_blank" class="name fs-3" title="Github"><i
                                             class="fa-brands fa-github"></i></a>
                                 </div>
@@ -393,7 +413,7 @@
                                 <div class="card-title d-flex justify-content-between">
                                     <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/Design-Week"
                                         target="_blank" class="link-number fs-3"><i class="fa-solid fa-folder"></i></a>
-                                    <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/Design-Week"
+                                    <a tabindex="19" href="https://github.com/Gabriel0508/Small-Websites/tree/main/Design-Week"
                                         target="_blank" class="name fs-3" title="Github"><i
                                             class="fa-brands fa-github"></i></a>
                                 </div>
@@ -416,7 +436,7 @@
                                 <div class="card-title d-flex justify-content-between">
                                     <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/Ignant"
                                         target="_blank" class="link-number fs-3"><i class="fa-solid fa-folder"></i></a>
-                                    <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/Ignant"
+                                    <a tabindex="20" href="https://github.com/Gabriel0508/Small-Websites/tree/main/Ignant"
                                         target="_blank" class="name fs-3" title="Github"><i
                                             class="fa-brands fa-github"></i></a>
                                 </div>
@@ -439,7 +459,7 @@
                                 <div class="card-title d-flex justify-content-between">
                                     <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/Juxtapoz"
                                         target="_blank" class="link-number fs-3"><i class="fa-solid fa-folder"></i></a>
-                                    <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/Juxtapoz"
+                                    <a tabindex="21" href="https://github.com/Gabriel0508/Small-Websites/tree/main/Juxtapoz"
                                         target="_blank" class="name fs-3" title="Github"><i
                                             class="fa-brands fa-github"></i></a>
                                 </div>
@@ -462,7 +482,7 @@
                                 <div class="card-title d-flex justify-content-between">
                                     <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/My%20Modern%20Met"
                                         target="_blank" class="link-number fs-3"><i class="fa-solid fa-folder"></i></a>
-                                    <a href="hhttps://github.com/Gabriel0508/Small-Websites/tree/main/My%20Modern%20Met"
+                                    <a tabindex="22" href="hhttps://github.com/Gabriel0508/Small-Websites/tree/main/My%20Modern%20Met"
                                         target="_blank" class="name fs-3" title="Github"><i
                                             class="fa-brands fa-github"></i></a>
                                 </div>
@@ -492,17 +512,17 @@
                     a
                     tque et porro ratione commodi soluta natus aperiam adipisci quo, earum eligendi alias nemo excepturi
                     vero. Vitae, ad?</p>
-                <a class="mail-link text-decoration-none" href="mailTo:gabrielgrad94@gmail.com">Say
+                <a tabindex="23" class="mail-link text-decoration-none" href="mailTo:gabrielgrad94@gmail.com">Say
                     Hello</a><!--TODO: add a border line-->
             </div>
 
             <div class="sm-footer mt-5">
                 <p class="name">Designed by:
-                    <a href="https://www.linkedin.com/in/anda-gheorghe/" target="_blank" title="LinkedIn"
+                    <a tabindex="24" href="https://www.linkedin.com/in/anda-gheorghe/" target="_blank" title="LinkedIn"
                         class="link-number text-decoration-none">Anda Gheorghe</a>
                 </p>
                 <p class="name">Built by: <span class="link-number">Gabriel Grad</span></p>
-                <!--TODO: add link to the profil-->
+                <!--TODO: add link to the profil & add tabindex-->
             </div>
         </section>
     </main>

@@ -14,34 +14,46 @@ nav {
     }
 
     /*Menu*/
-    .menu {
+    // .menu {
+    //   display: block;
+    //   cursor: pointer;
+    //   .line1 {
+    //     background-color: $extra-light-blue;
+    //     width: 2rem;
+    //     height: 0.1rem;
+    //     transition: all 0.7s ease;
+    //     margin: 0.3rem;
+    //   }
+    //   .line2 {
+    //     background-color: $extra-light-blue;
+    //     width: 1.5rem;
+    //     height: 0.1rem;
+    //     float: right;
+    //     transition: all 0.7s ease;
+    //     margin: 0.3rem;
+    //   }
+    // }
+    .openMenu {
       display: block;
       cursor: pointer;
-      .line1 {
-        background-color: $extra-light-blue;
-        width: 2rem;
-        height: 0.1rem;
-        transition: all 0.7s ease;
-        margin: 0.3rem;
-      }
-      .line2 {
-        background-color: $extra-light-blue;
-        width: 1.5rem;
-        height: 0.1rem;
-        float: right;
-        transition: all 0.7s ease;
-        margin: 0.3rem;
-      }
+      color: $extra-light-blue;
+      transition: all 0.7s ease;
+    }
+    .closeMenu {
+      display: none;
+      cursor: pointer;
+      color: $extra-light-blue;
+      transition: all 0.7s ease;
     }
   }
 }
 
-.menuToggle .line1 {
-  transform: rotate(-45deg) translate(-3px, 7px);
-}
-.menuToggle .line2 {
-  transform: rotate(45deg) translate(-5px, 1px);
-}
+// .menuToggle .line1 {
+//   transform: rotate(-45deg) translate(-3px, 7px);
+// }
+// .menuToggle .line2 {
+//   transform: rotate(45deg) translate(-5px, 1px);
+// }
 
 /*Sidenav*/
 .sidenav {
