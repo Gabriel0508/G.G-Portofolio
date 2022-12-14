@@ -33,19 +33,24 @@
   background: $light-blue;
 }
 
-//Bg-blurred on opening the side-menu
+/*Bg-blurred on opening the side-menu*/
 .is-blurred {
   filter: blur(0.1rem);
   -webkit-filter: blur(0.1rem);
   pointer-events: none;
 }
 
-//Main background
-#blurred {
-  background-color: $shades-blue;
+/*Main background color*/
+.main-section {
+ background-color: $shades-blue;
 }
 
-//Observer animation
+/*Change background color*/
+.light-mode {
+  @include bg-light-mode;
+}
+
+/*Observer animation*/
 .fade-in {
   opacity: 0;
   transition: opacity 350ms ease-in; 
@@ -78,27 +83,58 @@
   opacity: 1;
 }
 
-//Toast
-.g-toast {
+/*Toast*/
+.toast{
   right: 0;
   top: 0;
   z-index: 1;
-  .toast{
-    border-radius: 5rem;
-    .toast-header {
-     background-color: $white;
-     color: $shades-blue;
-    }
-    .toast-body {
-      background-color: $white;
-      color: $shades-blue;
-    }
+  border-radius: 5rem;
+  .toast-header {
+    background-color: $white;
+    color: $shades-blue;
   }
+  .toast-body {
+    background-color: $white;
+    color: $shades-blue;
+  }
+}
+
+/*Back to top btn*/
+#backbtn {
+  box-shadow: rgba(1, 5, 41, 0.4) 0px 2px 4px, rgba(0, 12, 27, 0.3) 0px 7px 13px -3px, rgba(0, 5, 29, 0.2) 0px -3px 0px inset;;
+  background: transparentize($color: $shades-blue, $amount: 0.9);
+  backdrop-filter: blur(.5rem);
+  @include border;
+  color: $extra-light-blue;
+  text-align: center;
+  overflow: hidden;
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  width: 2.5rem;
+  line-height: 1.5rem;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 1;
+  &:hover {
+    background-color: $light-blue;
+    color: $shades-blue;
+  }
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+/*Add shadow to the navbar on scrolling down*/
+.nav-shadow {
+  box-shadow: rgba(1, 5, 41, 0.4) 0px 2px 4px, rgba(0, 12, 27, 0.3) 0px 7px 13px -3px, rgba(0, 5, 29, 0.2) 0px -3px 0px inset;;
+  background: transparentize($color: $shades-blue, $amount: 0.3);
+  backdrop-filter: blur(.5rem);
 }
 
 /*Responsive*/
 @media screen and (max-width: 900px) {
-  .g-toast{
+  .toast {
     display: none;
   }
 }

@@ -21,6 +21,9 @@
       transform: scale(1.01);
   }
 }
+  .skills {
+   justify-content: space-around;
+  }
   .text-right {
     float: right;
     clear: right;
@@ -34,10 +37,12 @@
       transform: translate(0, -10px);
     }
   }
+
   .container {
     width: 80%;
     margin: auto;
   }
+
   .fade-in {
     opacity: 0;
     transition: opacity 350ms ease-in; 

@@ -15,8 +15,7 @@
 
 <body>
     <!--Navbar-->
-    <nav class="w-100 shadow p-2 position-sticky">
-        <!--TODO: check why the navbar is hidden at > "Other Projects" section when opening the sidenav-->
+    <nav class="w-100 p-2 position-sticky">
         <div class="containar-fluid d-flex align-items-center">
             <div class="logo">
                 <a tabindex="0" class="logo-title text-decoration-none fs-4" href="./portofolio.html">G.G</a>
@@ -25,11 +24,13 @@
                 <div class="line1"></div>
                 <div class="line2"></div>
             </div> -->
-            <div class="openMenu">
-                <i class="fa-solid fa-bars fs-3"></i>
-            </div>
-            <div class="closeMenu">
-                <i class="fa-solid fa-xmark fs-2"></i>
+            <div tabindex="1">
+                <div class="openMenu" onclick="openSidenav()">
+                    <i class="fa-solid fa-bars fs-4"></i>
+                </div>
+                <div class="closeMenu" onclick="closeSidenav()">
+                    <i class="fa-solid fa-xmark fs-2"></i>
+                </div>
             </div>
         </div>
     </nav>
@@ -37,73 +38,78 @@
     <!--Sidenav-->
     <div class="sidenav position-fixed">
         <ul class="nav-links list-unstyled p-1 p-5">
-            <li class="mt-3"><a tabindex="2" data-link="about" class="navigateTo link-color text-decoration-none fs-4"><span
-                        class="link-number">01.</span> About</a></li>
-            <li class="mt-3"><a tabindex="3" data-link="experience" class="navigateTo link-color text-decoration-none fs-4"><span
-                        class="link-number">02.</span> Experience</a></li>
-            <li class="mt-3"><a tabindex="4" data-link="work" class="navigateTo link-color text-decoration-none fs-4"><span
-                        class="link-number">03.</span> Work</a></li>
-            <li class="mt-3"><a tabindex="5" data-link="contact" class="navigateTo  link-color text-decoration-none fs-4"><span
-                        class="link-number">04.</span> Contact</a></li>
+            <li class="mt-3"><a tabindex="2" data-link="about"
+                    class="navigateTo link-color text-decoration-none fs-4"><span class="link-number">01.</span>
+                    About</a></li>
+            <li class="mt-3"><a tabindex="3" data-link="experience"
+                    class="navigateTo link-color text-decoration-none fs-4"><span class="link-number">02.</span>
+                    Experience</a></li>
+            <li class="mt-3"><a tabindex="4" data-link="work"
+                    class="navigateTo link-color text-decoration-none fs-4"><span class="link-number">03.</span>
+                    Work</a></li>
+            <li class="mt-3"><a tabindex="5" data-link="contact"
+                    class="navigateTo  link-color text-decoration-none fs-4"><span class="link-number">04.</span>
+                    Contact</a></li>
             <li class="mt-5"><a tabindex="6" href="/assets/resume/Gabriel_Grad_-_Web_Developer.pdf" target="_blank"
-                    class="resume link-color text-decoration-none fs-4 p-2">Resume</a></li>
+                    class="resume link-color text-decoration-none fs-4 p-2" onclick="closeSidenav()">Resume</a></li>
             <!--Icons-->
             <span class="d-flex justify-content-between mt-5">
-                <li><a tabindex="7" class="link-color text-decoration-none fs-4" href="https://www.instagram.com/gabrielgrad94/"
-                        target="_blank"><i class="fa-brands fa-square-instagram" title="Instagram"></i></a></li>
-                <li><a tabindex="8" class="link-color text-decoration-none fs-4" href="https://www.linkedin.com/in/gabriel0508/"
-                        target="_blank"><i class="fa-brands fa-linkedin" title="LinkedIn"></i></a></li>
+                <li><a tabindex="7" class="link-color text-decoration-none fs-4"
+                        href="https://www.instagram.com/gabrielgrad94/" target="_blank" onclick="closeSidenav()"><i
+                            class="fa-brands fa-square-instagram" title="Instagram"></i></a></li>
+                <li><a tabindex="8" class="link-color text-decoration-none fs-4"
+                        href="https://www.linkedin.com/in/gabriel0508/" target="_blank" onclick="closeSidenav()"><i
+                            class="fa-brands fa-linkedin" title="LinkedIn"></i></a></li>
                 <li><a tabindex="9" class="link-color text-decoration-none fs-4" href="https://github.com/Gabriel0508"
-                        target="_blank"><i class="fa-brands fa-github" title="Github"></i></a></li>
-                <li><a tabindex="10" class="link-color text-decoration-none fs-4" href="mailto:gabrielgrad94@gmail.com"><i
-                        class="fa-solid fa-envelope" data-bs-toggle="tooltip" data-bs-placement="top" title="E-Mail"></i></a></li>
+                        target="_blank" onclick="closeSidenav()"><i class="fa-brands fa-github" title="Github"></i></a>
+                </li>
+                <li><a tabindex="10" class="link-color text-decoration-none fs-4"
+                        href="mailto:gabrielgrad94@gmail.com"><i class="fa-solid fa-envelope" onclick="closeSidenav()"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="E-Mail"></i></a></li>
             </span>
         </ul>
     </div>
 
-    <main id="blurred">
+    <main id="blurred" class="main-section">
         <!--Language-->
         <!-- <span class="w-100 d-flex align-items-center justify-content-center p-0">
             <a href="#" class="text-decoration-none text-light mx-1 border-end-0">English</a>
             <a href="#" class="text-decoration-none text-light mx-1">Deutsch</a>          
         </span> -->
+
+        <!--To top Btn-->
+        <button onclick="scrollToTop()" id="backbtn" title="Scroll back" class="btn">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
         <!--Toast-->
-        <div class="g-toast position-fixed p-5">
-            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-              <div class="toast-header">
+        <div id="liveToast" class="toast position-fixed hide m-3" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
                 <h5 class="fw-bold">Keyboard Navigation</h5>
-              </div>
-              <div class="toast-body">Press on the <b>TAB</b> key to navigate through all links</div>
             </div>
+            <div class="toast-body">Press on the <b>TAB</b> key to navigate through all links</div>
         </div>
 
         <!--Home-->
         <section id="home" class="home overflow-hidden">
             <!--Change background color-->
-            <!-- <div class="fade-in bg-checkbox d-flex align-items-center">
+            <div class="fade-in bg-checkbox d-flex align-items-center">
                 <i class="fa-regular fa-moon"></i>
                 <div class="form-check form-switch mx-2">
                     <input class="form-check-input" type="checkbox" id="bg-change">
                 </div>
                 <i class="fa-regular fa-sun"></i>
-            </div> -->
+            </div>
             <!--Home page-->
             <div class="row mt-5">
                 <div class="fade-in col-sm-12 col-md-12 col-lg-6">
                     <div>
                         <h5 class="greeting">Hi, my name is</h5>
                         <h1 class="name">Gabriel Grad</h1>
-                        <h2 class="description">I'm interested in the Web Development path.</h2>
-                        <p class="description mt-5">I am a Junior Angular Developer who is interested in Angular/
-                            JavaScript
-                            roles. I am most comfortable working with Angular and JavaScript, however, I would be open
-                            to
-                            learning Java to integrate into a full stack role in future.
-                            I would like to work for a company that will support my growth as a Developer and allows me
-                            to
-                            be part of a team with Senior Developers who are open to mentoring me.
-                            Please note that I am open to remote working but not fully in-office setups.
-                            Please note that I am available immediately.</p>
+                        <h3 class="description">I'm interested in the Web Development path.</h3>
+                        <p class="description mt-5">I am a Angular Developer who is interested in Angular/JavaScript and focused on building beautiful interfaces and experiences.
+                         I am most comfortable working with Angular and JavaScript, however, I would be open to learning Java to integrate into a full stack role in future.
+                        </p>
                     </div>
                 </div>
                 <div class="fade-in col-sm-12 col-md-12 col-lg-6">
@@ -120,17 +126,15 @@
             <div class="row">
                 <div class="fade-in col-sm-12 col-md-12 col-lg-6">
                     <div class="mt-5">
-                        <p class="description mt-5">I am a Junior Angular Developer who is interested in Angular/
-                            JavaScript
-                            roles. I am most comfortable working with Angular and JavaScript, however, I would be open
-                            to
-                            learning Java to integrate into a full stack role in future.
-                            I would like to work for a company that will support my growth as a Developer and allows me
-                            to
-                            be part of a team with Senior Developers who are open to mentoring me.
-                            Please note that I am open to remote working but not fully in-office setups.
-                            Please note that I am available immediately.</p>
-                        <h4 class="description">Here are a few technologies I've been working with recently:</h4>
+                        <p class="description mt-5">I'm currently an Front End Software Engineer at a big Company located in Cluj Napoca (Romania) 
+                            building Web-Applications in Angular for the banking industry. <!--TODO:space between description instead "br" element-->
+
+                            I started learning the Front-End part on my own by taking courses on Udemy Academy, 
+                            I also work in a team with professional programmerrs who help me develop my programming skills. </br>
+
+                            <b>When I'm not writing code</b>, I'm most likely at the gym, practicing kickboxing or improving my English and German skills
+                        </p>
+                        <h4 class="description">Here are a few technologies I've been working with recently:</h4> <!--TODO: improve this side when tech logos are done-->
                         <div class="d-flex mt-3">
                             <ul class="list-unstyled pr-4 slide-in from-left">
                                 <li class="description"><i class="fa-solid fa-caret-right link-number m-2"></i>HTML</li>
@@ -139,17 +143,19 @@
                                 </li>
                             </ul>
                             <ul class="list-unstyled px-4 slide-in from-left">
-                                <li class="description"><i class="fa-solid fa-caret-right link-number m-2"></i>JavaScript(ES6+)</li>
-                                <li class="description"><i class="fa-solid fa-caret-right link-number m-2"></i>TypeScript</li>
-                                <li class="description"><i class="fa-solid fa-caret-right link-number m-2"></i>Angular</li>
+                                <li class="description"><i
+                                        class="fa-solid fa-caret-right link-number m-2"></i>JavaScript(ES6+)</li>
+                                <li class="description"><i
+                                        class="fa-solid fa-caret-right link-number m-2"></i>TypeScript</li>
+                                <li class="description"><i class="fa-solid fa-caret-right link-number m-2"></i>Angular
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="fade-in text-center col-sm-12 col-md-12 col-lg-6">
                     <div class="mt-5 d-flex align-items-center justify-content-between">
-                        <img src="./assets/images/html-logo.png" style="width: 10%; height: 11vh;"
-                            alt="html" />
+                        <img src="./assets/images/html-logo.png" style="width: 10%; height: 11vh;" alt="html" />
                         <img src="./assets/images/CSS3_logo.svg.png" style="width: 10%; height: 11vh;" alt="css" />
                         <img src="./assets/images/angular-logo.png" style="width: 15%;" alt="angular" />
                     </div>
@@ -164,46 +170,43 @@
         </section>
 
         <!--Work-experience-->
-        <section id="experience" class="work-experience py-5"><!--TODO: add gradient on the bg-image(responsive)-->
+        <section id="experience" class="work-experience py-5">
             <h4 class="name fade-in"><span class="link-number">02.</span> Where I've Worked</h4>
             <div class="accordion fade-in accordion-flush mt-5" id="accordionFlushExample">
-                <!--TODO: change the collapsed icon from acordion-->
                 <div class="accordion-item">
                     <div class="accordion-header" id="flush-headingOne">
-                        <span tabindex="11" class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Junior Software Engineer @Accesa.eu
+                        <button tabindex="11" class="accordion-button collapsed fw-bold fs-5" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                            aria-controls="flush-collapseOne">
+                            Junior Software Engineer <span class="mx-3">@Accesa.eu</span>
                             <!--TODO: add start and end collaboration date overall-->
-                        </span>
+                        </button>
                     </div>
                     <div id="flush-collapseOne" class="accordion-collapse collapse show mt-2"
                         aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <div class="job-place">
-                                <h5><i class="fa-solid fa-location-dot mx-3"></i>Cluj-Napoca, Romania</h4>
-
-                            </div>
+                                <h5 class="my-2"><i class="fa-solid fa-location-dot mx-3"></i>Cluj-Napoca, Romania</h5>
                             <p><i class="fa-solid fa-caret-right link-number mx-2"></i>
-                                Developed key features and maintained a large web application using Angular</p>
+                                Developed key features and maintained a large web application using Angular
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item mt-2">
                     <div class="accordion-header" id="flush-headingTwo">
-                        <span  tabindex="12"class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Junior UI/Angular Developer @P4B Group
+                        <span tabindex="12" class="accordion-button collapsed fw-bold fs-5" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                            aria-controls="flush-collapseTwo">
+                            Junior UI/Angular Developer <spna class="mx-3">@P4B Group</spna>
                         </span>
                     </div>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse mt-2" aria-labelledby="flush-headingTwo"
-                        data-bs-parent="#accordionFlushExample">
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse mt-2"
+                        aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <div class="job-place">
-                                <h5><i class="fa-solid fa-location-dot mx-3"></i>Cluj-Napoca, Romania</h4>
-
-                            </div>
+                                <h5 class="my-2"><i class="fa-solid fa-location-dot mx-3"></i>Cluj-Napoca, Romania</h4>
                             <ul class="list-unstyled mt-3">
-                                <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Developed key features and maintained a large web application using Angular</li>
+                                <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Developed key
+                                    features and maintained a large web application using Angular</li>
                                 <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Defined and
                                     researched product
                                     features as part of the product team</li>
@@ -234,19 +237,16 @@
                 </div>
                 <div class="accordion-item mt-2">
                     <div class="accordion-header" id="flush-headingThree">
-                        <span tabindex="13" class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                        <span tabindex="13" class="accordion-button collapsed fw-bold fs-5" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
                             aria-controls="flush-collapseThree">
-                            Assistant Electrician @Sascha Dörner
+                            Assistant Electrician <span class="mx-3">@Sascha Dörner</span>
                         </span>
                     </div>
                     <div id="flush-collapseThree" class="accordion-collapse collapse mt-2"
                         aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <div class="job-place">
-                                <h5><i class="fa-solid fa-location-dot mx-3"></i>Munich, Germany</h4>
-
-                            </div>
+                                <h5 class="my-2"><i class="fa-solid fa-location-dot mx-3"></i>Munich, Germany</h4>
                             <ul class="list-unstyled mt-3">
                                 <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Transport
                                     tools, materials and
@@ -270,23 +270,20 @@
                 </div>
                 <div class="accordion-item mt-2">
                     <div class="accordion-header" id="flush-headingFour">
-                        <span tabindex="14" class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                        <span tabindex="14" class="accordion-button collapsed fw-bold fs-5" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
                             aria-controls="flush-collapseFour">
-                            Production Assistant @BMW Group
+                            Production Assistant<span class="mx-3">@BMW Group</span>
                         </span>
                     </div>
-                    <div id="flush-collapseFour" class="accordion-collapse collapse mt-2" aria-labelledby="flush-headingFour"
-                        data-bs-parent="#accordionFlushExample">
+                    <div id="flush-collapseFour" class="accordion-collapse collapse mt-2"
+                        aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <div class="job-place">
-                                <h5><i class="fa-solid fa-location-dot mx-3"></i>Regensburg / Munich, Germany</h4>
-
-                            </div>
+                                <h5 class="my-2"><i class="fa-solid fa-location-dot mx-3"></i>Regensburg / Munich, Germany</h4>
                             <ul class="list-unstyled mt-3">
                                 <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Assembles
                                     finished product</li>
-                                <li><i class="fa-solid fa-caret-right link-number mx-2"></i>Inspects product to ensure
+                                <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Inspects product to ensure
                                     high
                                     quality</li>
                                 <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Work as a Team
@@ -294,10 +291,9 @@
                                 <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Worked as
                                     member of assembly
                                     group utilizing hand tools</li>
-                                <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>read
+                                <li class="mt-2"><i class="fa-solid fa-caret-right link-number mx-2"></i>Read
                                     specifications, design
-                                    parts, build, maintain, and operatemachinery and tools used to produce parts, and
-                                    assemble theautomobiles</li>
+                                    parts, build, maintain, and operatemachinery and tools used to produce parts</li>
                             </ul>
                         </div>
                     </div>
@@ -311,20 +307,16 @@
             <div class="row g-0 mt-5">
                 <div class="slide-in from-left col-sm-12 col-md-12 col-lg-6">
                     <a tabindex="15" href="https://watches-online-magazine.netlify.app/" target="_blank">
-                        <img class="project-img" src="./assets/images/1..PNG"
-                            alt="watches-magazine"><!--TODO: add hover effect on img-->
+                        <img class="project-img" src="./assets/images/1..PNG" alt="watches-magazine">
                     </a>
                 </div>
                 <div class="slide-in from-right col-sm-12 col-md-12 col-lg-6">
                     <h5 class="link-number text-right">Featured Project</h2>
                         <h1 class="name text-right">Watches Magazine</h1>
-                        <p class="name text-right">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium iste repellat fugiat
-                            hic ipsa perspiciatis
-                            molestiae illo laboriosam, suscipit sed, aperiam placeat, inventore corporis eius enim.
-                            Porro, provident! Facilis, quisquam.
+                        <p class="name text-right mt-4">
+                            It is a project created to improve my JavaScript skills and for styling I only used Css. 
                         </p>
-                        <div class="name d-flex mt-5 link-number text-right"><!--TODO: add some place between p-->
+                        <div class="name skills d-flex mt-5 link-number text-right"><!--TODO: add some place between "skills class" p-->
                             <p>Html</p>
                             <p>Scss</p>
                             <p>JavaScript</p>
@@ -336,13 +328,10 @@
                 <div class="slide-in from-left col-sm-12 col-md-12 col-lg-6">
                     <h5 class="link-number">Featured Project</h2>
                         <h1 class="name">Gabe Restaurant</h1>
-                        <p class="name">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium iste repellat fugiat
-                            hic ipsa perspiciatis
-                            molestiae illo laboriosam, suscipit sed, aperiam placeat, inventore corporis eius enim.
-                            Porro, provident! Facilis, quisquam.
+                        <p class="name mt-4">
+                            It is a project created to improve my Sass skills based on Bootstrap and also I developed an animation sidenav (on mobile devices) with JavaScript. 
                         </p>
-                        <div class="d-flex mt-5 link-number">
+                        <div class="d-flex skills mt-5 link-number">
                             <p>Html</p>
                             <p>Scss</p>
                             <p>Bootstrap</p>
@@ -353,7 +342,7 @@
                 <div class="slide-in from-right col-sm-12 col-md-12 col-lg-6">
                     <a tabindex="16" href="#" target="_blank">
                         <img class="project-img" src="./assets/images/gabe-restaurant.PNG"
-                            alt="restaurant"><!--TODO: add hover effect on img-->
+                            alt="restaurant">
                     </a>
                 </div>
             </div>
@@ -368,7 +357,8 @@
                                 <div class="card-title d-flex justify-content-between">
                                     <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/Colossal"
                                         target="_blank" class="link-number fs-3"><i class="fa-solid fa-folder"></i></a>
-                                    <a tabindex="17" href="https://github.com/Gabriel0508/Small-Websites/tree/main/Colossal"
+                                    <a tabindex="17"
+                                        href="https://github.com/Gabriel0508/Small-Websites/tree/main/Colossal"
                                         target="_blank" class="name fs-3" title="Github"><i
                                             class="fa-brands fa-github"></i></a>
                                 </div>
@@ -390,7 +380,8 @@
                                 <div class="card-title d-flex justify-content-between">
                                     <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/Abduzeedo"
                                         target="_blank" class="link-number fs-3"><i class="fa-solid fa-folder"></i></a>
-                                    <a tabindex="18" href="https://github.com/Gabriel0508/Small-Websites/tree/main/Abduzeedo"
+                                    <a tabindex="18"
+                                        href="https://github.com/Gabriel0508/Small-Websites/tree/main/Abduzeedo"
                                         target="_blank" class="name fs-3" title="Github"><i
                                             class="fa-brands fa-github"></i></a>
                                 </div>
@@ -413,7 +404,8 @@
                                 <div class="card-title d-flex justify-content-between">
                                     <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/Design-Week"
                                         target="_blank" class="link-number fs-3"><i class="fa-solid fa-folder"></i></a>
-                                    <a tabindex="19" href="https://github.com/Gabriel0508/Small-Websites/tree/main/Design-Week"
+                                    <a tabindex="19"
+                                        href="https://github.com/Gabriel0508/Small-Websites/tree/main/Design-Week"
                                         target="_blank" class="name fs-3" title="Github"><i
                                             class="fa-brands fa-github"></i></a>
                                 </div>
@@ -436,7 +428,8 @@
                                 <div class="card-title d-flex justify-content-between">
                                     <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/Ignant"
                                         target="_blank" class="link-number fs-3"><i class="fa-solid fa-folder"></i></a>
-                                    <a tabindex="20" href="https://github.com/Gabriel0508/Small-Websites/tree/main/Ignant"
+                                    <a tabindex="20"
+                                        href="https://github.com/Gabriel0508/Small-Websites/tree/main/Ignant"
                                         target="_blank" class="name fs-3" title="Github"><i
                                             class="fa-brands fa-github"></i></a>
                                 </div>
@@ -459,7 +452,8 @@
                                 <div class="card-title d-flex justify-content-between">
                                     <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/Juxtapoz"
                                         target="_blank" class="link-number fs-3"><i class="fa-solid fa-folder"></i></a>
-                                    <a tabindex="21" href="https://github.com/Gabriel0508/Small-Websites/tree/main/Juxtapoz"
+                                    <a tabindex="21"
+                                        href="https://github.com/Gabriel0508/Small-Websites/tree/main/Juxtapoz"
                                         target="_blank" class="name fs-3" title="Github"><i
                                             class="fa-brands fa-github"></i></a>
                                 </div>
@@ -482,7 +476,8 @@
                                 <div class="card-title d-flex justify-content-between">
                                     <a href="https://github.com/Gabriel0508/Small-Websites/tree/main/My%20Modern%20Met"
                                         target="_blank" class="link-number fs-3"><i class="fa-solid fa-folder"></i></a>
-                                    <a tabindex="22" href="hhttps://github.com/Gabriel0508/Small-Websites/tree/main/My%20Modern%20Met"
+                                    <a tabindex="22"
+                                        href="hhttps://github.com/Gabriel0508/Small-Websites/tree/main/My%20Modern%20Met"
                                         target="_blank" class="name fs-3" title="Github"><i
                                             class="fa-brands fa-github"></i></a>
                                 </div>
@@ -512,17 +507,16 @@
                     a
                     tque et porro ratione commodi soluta natus aperiam adipisci quo, earum eligendi alias nemo excepturi
                     vero. Vitae, ad?</p>
-                <a tabindex="23" class="mail-link text-decoration-none" href="mailTo:gabrielgrad94@gmail.com">Say
-                    Hello</a><!--TODO: add a border line-->
+                <a tabindex="23" class="mail-link text-decoration-none" href="mailTo:gabrielgrad94@gmail.com">Say Hello</a>
             </div>
 
-            <div class="sm-footer mt-5">
+            <div class="contact-links mt-5">
                 <p class="name">Designed by:
                     <a tabindex="24" href="https://www.linkedin.com/in/anda-gheorghe/" target="_blank" title="LinkedIn"
                         class="link-number text-decoration-none">Anda Gheorghe</a>
                 </p>
-                <p class="name">Built by: <span class="link-number">Gabriel Grad</span></p>
-                <!--TODO: add link to the profil & add tabindex-->
+                <p class="name">Built by: <a tabindex="25"
+                    href="https://www.linkedin.com/in/gabriel0508/" target="_blank" class="link-number text-decoration-none">Gabriel Grad</a></p>
             </div>
         </section>
     </main>

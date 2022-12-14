@@ -4,7 +4,7 @@ $shades-blue: #0a192f;
 
 nav {
   background-color: $shades-blue;
-  transition: all 0.5s ease-in-out;
+  //transition: all .5s ease-in;
   z-index: 1;
   .containar-fluid {
     justify-content: space-around;
@@ -12,7 +12,6 @@ nav {
     .logo-title {
       color: $extra-light-blue;
     }
-
     /*Menu*/
     // .menu {
     //   display: block;
@@ -37,13 +36,11 @@ nav {
       display: block;
       cursor: pointer;
       color: $extra-light-blue;
-      transition: all 0.7s ease;
     }
     .closeMenu {
       display: none;
       cursor: pointer;
       color: $extra-light-blue;
-      transition: all 0.7s ease;
     }
   }
 }

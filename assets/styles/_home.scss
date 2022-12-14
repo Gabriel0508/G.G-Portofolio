@@ -7,6 +7,13 @@
     .fa-sun,.fa-moon {
       color: $white;
     }
+    .form-check-input {
+      color: $light-nav;
+      cursor: pointer;
+      &:focus {
+        box-shadow: none !important;
+      } 
+    }
   }
   .greeting {
     color: $extra-light-blue;

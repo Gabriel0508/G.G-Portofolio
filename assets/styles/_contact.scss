@@ -1,7 +1,7 @@
 @import "./mixins";
 .contact {
   width: 50%;
-  height: 50vh;
+  height: 55vh;
   margin: auto;
     .name {
         color: $light-blue;
@@ -16,10 +16,10 @@
     .mail-link {
       @include link-border;
     } 
-    .sm-footer {
+    .contact-links {
       display: flex;
-      justify-content: space-around;
-    }
+      justify-content: space-between;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -27,8 +27,11 @@
     width: 100%;
     margin: none;
     padding: 1.5rem;
-    .sm-footer {
-      justify-content: none;
+    .contact-links {
+      display: unset;
+      float: left;
+      left: 0;
+      justify-content: unset;
     }
   }
 }

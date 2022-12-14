@@ -1,76 +1,93 @@
 "use strict";
+const openMenu = document.querySelector(".openMenu");
+const closeMenu = document.querySelector(".closeMenu");
+const sidenav = document.querySelector(".sidenav");
+const navLinks = document.querySelectorAll(".nav-links li");
+const main = document.getElementById("blurred");
+const body = document.querySelector("body");
+const links = document.querySelectorAll(".navigateTo");
+const navbar = document.querySelector("nav");
+const bgBtn = document.getElementById("bg-change");
+const toTopBtn = document.getElementById("backbtn");
+
 /**
- * Method to animate the navigation bar and the side menu
+ * Method to open the sidenav
  */
-const navSlide = () => { //TODO: create functions overall
-  //const menu = document.querySelector(".menu");
-    const openMenu = document.querySelector(".openMenu");
-    const closeMenu = document.querySelector(".closeMenu");
-  const sidenav = document.querySelector(".sidenav");
-  const navLinks = document.querySelectorAll(".nav-links li");
-  const section = document.getElementById("blurred");
-  const body = document.querySelector("body");
-  const links = document.querySelectorAll(".navigateTo");
+function openSidenav() {
+  sidenav.classList.add('sidenav-active');
+  openMenu.style.display = "none";
+  closeMenu.style.display = "block";
+  body.style.overflow = "hidden";
+  main.classList.add("is-blurred");
 
-  openMenu.addEventListener("click", () => {
-    //Toggle nav
-    //sidenav.classList.toggle("sidenav-active");
-    sidenav.classList.add('sidenav-active');
-    openMenu.style.display = "none";
-    closeMenu.style.display = "block";
-    body.style.overflow = "hidden";
-    section.classList.add("is-blurred");
-
-    //Animate nav links
-    navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = "";
-      } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-      }
-    });
-
-    //Navigate to html's sections
-    links.forEach((item) => {
-      item.addEventListener("click", () => {
-        const el = document.getElementById(item.getAttribute("data-link"));
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-        section.classList.remove("is-blurred");
-        sidenav.classList.remove("sidenav-active");
-        body.style.overflow = "visible";
-        closeMenu.style.display = "none";
-        openMenu.style.display = "block";
-      });
-    });
-
-    //Menu animation
-   // menu.classList.toggle("menuToggle");
+  //Animated the navlinks
+  navLinks.forEach((link, index) => { //TODO: check the animation at the second time on clicking on the side menu icon
+    // if (link.style.animation) {
+    //   debugger;
+    //   link.style.animation = "";
+    // } else {
+      link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+    //}
   });
-
-  closeMenu.addEventListener("click", () => {
-    sidenav.classList.remove('sidenav-active');
-    closeMenu.style.display = "none";
-    openMenu.style.display = "block";
-    body.style.overflow = "visible";
-    section.classList.remove("is-blurred");
-  })
 }
-navSlide();
 
 /**
- * Show the navbar on scrolling up
+ * Method to close the sidenav
  */
-const navbar = document.querySelector("nav"); //TODO: check why the navbar is hidden at section "Other Projects" (open side nav + navbar top hidden)
-let prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    navbar.style.top = "0";
-  } else {
-    navbar.style.top = "-3rem";
-  }
-  prevScrollpos = currentScrollPos;
+function closeSidenav() {
+  sidenav.classList.remove('sidenav-active');
+  main.classList.remove("is-blurred");
+  closeMenu.style.display = "none";
+  openMenu.style.display = "block";
+  body.style.overflow = "visible";
 }
+
+/**
+ * Method to close the sidenav on clicking outside of it
+ */
+window.addEventListener('mouseup', function(event){
+	if (event.target != sidenav && event.target.parentNode != sidenav) {
+      closeSidenav();
+    }
+});
+
+/**
+ * Method to navigate to html's sections
+ */
+  links.forEach((item) => {
+    item.addEventListener("click", () => {
+    const link = document.getElementById(item.getAttribute("data-link"));
+    link.scrollIntoView({ behavior: "smooth", block: "start"});
+    closeSidenav();
+  });
+});
+
+/**
+ * Method to slide down the navbar on scroll
+ */
+window.onscroll = function() {
+  scrollFunction()
+};
+function scrollFunction() {
+  if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+   navbar.style.top = "0";
+   navbar.classList.add('nav-shadow');
+   toTopBtn.style.display = "block";
+  } else {
+  navbar.style.top = "-3rem";
+  navbar.classList.remove('nav-shadow');
+  toTopBtn.style.display = "none";
+  }
+}
+
+/**
+ * Method to navigate to home page
+ */
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 /**
  * Observer Animation
  */
@@ -80,10 +97,7 @@ const appearOptions = {
 };
 const faders = document.querySelectorAll(".fade-in");
 const sliders = document.querySelectorAll(".slide-in");
-const appearOnScroll = new IntersectionObserver(function (
-  entries,
-  appearOnScroll
-) {
+const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
       return;
@@ -109,15 +123,11 @@ sliders.forEach((slider) => {
 document.querySelector('[tabindex]');
 document.addEventListener("keydown", (e) => {
  e.preventDefault()
- if (e.key === 'Tab') {
+ if (e.key === 'Tab') { //navigate through links and buttons (divs)
     let e = [...document.querySelectorAll('[tabindex]')],
     i = e.indexOf(document.activeElement) + 1;
     i = i === e.length ? i = 0 : i;
     e[i].focus();
-  }else if ([tabindex='1']) {
-    let myAlert = document.querySelector('.toast');
-    let bsAlert = new  bootstrap.Toast(myAlert);
-    bsAlert.show();
   }else if (e.key === "Home") {
     window.location.hash = "#home";  //navigate to <home> page
   }else if (e.key.toLocaleLowerCase() === "r" && e.ctrlKey) {
@@ -134,7 +144,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 /**
- * Show the toast notification
+ * Method to show the toast notification
 */
   window.onload = () => {
     let myAlert = document.querySelector('.toast');
@@ -142,10 +152,10 @@ document.addEventListener("keydown", (e) => {
     bsAlert.show();
   }
 
-// /**
-//  * Change the background color
-//  */
-// const btn = document.getElementById("bg-change");
-// btn.addEventListener("click", () => {
- //TODO:
-// });
+/**
+ * Change the main background color
+ */
+bgBtn.addEventListener("click", () => {
+  main.classList.toggle("light-mode");
+  navbar.classList.toggle("light-mode");
+});

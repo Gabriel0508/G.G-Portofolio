@@ -22,12 +22,15 @@
 }
 
 @mixin box-shadow {
-    box-shadow: $light-blue 5px 5px,  //TODO: use rem instead px
-    $light-blue 10px 10px
+    box-shadow: $light-blue .5rem .5rem, $light-blue .8rem .9rem;
 }
 
 @mixin focus {
     outline: none;
     color: $white;
-    background-color: red;
+}
+
+@mixin bg-light-mode {
+    //TODO: change the text color too 
+    background-color: $blue;
 }
