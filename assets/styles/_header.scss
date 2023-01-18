@@ -13,25 +13,6 @@ nav {
       color: $extra-light-blue;
     }
     /*Menu*/
-    // .menu {
-    //   display: block;
-    //   cursor: pointer;
-    //   .line1 {
-    //     background-color: $extra-light-blue;
-    //     width: 2rem;
-    //     height: 0.1rem;
-    //     transition: all 0.7s ease;
-    //     margin: 0.3rem;
-    //   }
-    //   .line2 {
-    //     background-color: $extra-light-blue;
-    //     width: 1.5rem;
-    //     height: 0.1rem;
-    //     float: right;
-    //     transition: all 0.7s ease;
-    //     margin: 0.3rem;
-    //   }
-    // }
     .openMenu {
       display: block;
       cursor: pointer;
@@ -44,13 +25,6 @@ nav {
     }
   }
 }
-
-// .menuToggle .line1 {
-//   transform: rotate(-45deg) translate(-3px, 7px);
-// }
-// .menuToggle .line2 {
-//   transform: rotate(45deg) translate(-5px, 1px);
-// }
 
 /*Sidenav*/
 .sidenav {
