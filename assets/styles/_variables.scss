@@ -1,20 +1,20 @@
-$blue: #406882;
-$matt-blue: #2c3639;
-$shades-blue: #0a192f;
-$light-blue: #B1D0E0;
-$extra-light-blue: #00E7FF; //#64ffda.
-$light-nav: #112240;
-$black: #000000;
-$white: #FFFFFF;
+//colors
+$blue: #2a78fd;
+$dark-blue: #040317;
+$light-blue: #41c1fd;
+$extra-light-blue: #a8b4d8;
+$blue-green: #112240;
+$white: #f7faff;
 
-$theme-colors: (
-    "primary": $shades-blue
+$theme-colors: () !default;
+$theme-colors: map-merge (
+    (
+      "blue": $blue,
+      "dark-blue": $dark-blue,
+      "light-blue": $light-blue,
+      "extra-light-blue": $extra-light-blue,
+      "blue-green": $blue-green,
+      "white": $white
+    ),
+  $theme-colors
 );
-
-// Create your own map
-$custom-colors: (
-  "blue": #00E7FF
-);
-
-// Merge the maps
-$theme-colors: map-merge($theme-colors, $custom-colors);

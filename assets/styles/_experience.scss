@@ -1,0 +1,23 @@
+.accordion {
+  width: 100%;
+  z-index: 3;
+  .accordion-item {
+    background-color: $dark-blue;
+    .accordion-button {
+      background-color: $blue;
+      color: $white;
+      &::after {
+        color: $white;// TODO 
+      }
+      &:not(.colapsed)::after {
+        color: $white;
+      }
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+    .accordion-body {
+      background-color: $blue-green;
+    }
+  }
+}

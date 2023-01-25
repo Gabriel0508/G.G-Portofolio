@@ -1,0 +1,98 @@
+@import "./variables";
+@import "./mixins";
+
+nav {
+  background: transparentize($color: $dark-blue, $amount: 1);
+  backdrop-filter: blur(0.5rem);
+  transition: all .7s ease-in-out;
+  z-index: 1;
+  .container-fluid {
+    height: 8vh;
+    .logo {
+      img {
+        width: 2rem;
+      }
+    }
+    .nav-links {
+      width: 40%;
+      display: flex;
+      margin-bottom: unset !important;
+      .link-name {
+        color: $extra-light-blue;
+        transition: all 0.25s ease-in-out;
+        &:hover {
+          color: $light-blue;
+        }
+      }
+      .icons {
+        display: none;
+      }
+    }
+    .menu {
+      display: none;
+      .openMenu {
+        display: block;
+        cursor: pointer;
+        color: $light-blue;
+      }
+      .closeMenu {
+        display: none;
+        cursor: pointer;
+        color: $light-blue;
+      }
+    }
+  }
+}
+
+//Animation
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/*Responsive*/
+@media screen and (max-width: 1240px) {
+  nav {
+    background: $dark-blue;
+    .container-fluid {
+      .nav-links {
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        width: 80%;
+        top: 6vh;
+        background-color: $dark-blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        padding: 3rem 0;
+        .icons {
+          display: flex;
+        }
+      }
+      .nav-links li {
+        opacity: 0;
+      }
+      .menu {
+        display: block;
+      }
+    }
+  }
+}
+
+nav {
+  .container-fluid {
+    .nav-active {
+      transform: translateX(0%);
+    }
+  }
+}

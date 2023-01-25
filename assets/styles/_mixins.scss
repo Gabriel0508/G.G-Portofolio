@@ -1,36 +1,39 @@
+@import "./variables";
+
+//default classes
+@each $color, $value in $theme-colors {
+  // .text-#{$color} {
+  //   color: $value !important;
+  // }
+
+  // .bg-#{$color} {
+  //   background-color: $value !important;
+  // }
+}
+
+//Border
 @mixin border {
-    border: .1rem solid $extra-light-blue;
+  border: 0.1rem solid $light-blue;
 }
 
-@mixin link-border {
-    @include border;
-    background-color: $shades-blue;
+@mixin btn-border {
+  @include border;
+  background-color: $dark-blue;
+  color: $light-blue;
+  padding: 0.6rem 1rem;
+  border-radius: 2%;
+  transition: all 0.15s ease-in-out;
+  &:hover {
+    background-color: $blue-green;
     color: $extra-light-blue;
-    padding: .6rem 1rem;
-    border-radius: 2%;
-    transition: all .25s ease-in-out;
-    &:hover {
-     background-color: $light-nav;
-    }
-}
-
-@mixin btn-static{
-    background-color: $blue;
-    color: $light-blue;
-    border-radius: 5rem;
-    padding: .5rem 2rem;
+  }
 }
 
 @mixin box-shadow {
-    box-shadow: $light-blue .5rem .5rem, $light-blue .8rem .9rem;
+  box-shadow: $light-blue 0.5rem 0.5rem, $light-blue 0.8rem 0.9rem;
 }
 
 @mixin focus {
-    outline: none;
-    color: $white;
-}
-
-@mixin bg-light-mode {
-    //TODO: change the text color too 
-    background-color: $blue;
+  outline: none;
+  color: $white;
 }
