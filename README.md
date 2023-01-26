@@ -9,4 +9,4 @@ psw: GabrielGrad#2023
 
 In creating this website I used the fullpage.js and Bootstrap library 
 
-![image](https://user-images.githubusercontent.com/65502252/214691807-cd5c87ac-d208-45cf-b487-3cadfaa685ff.png)
+![image](https://user-images.githubusercontent.com/65502252/214871371-3942e723-6963-42ea-9ae3-9650ee111a3c.png)
