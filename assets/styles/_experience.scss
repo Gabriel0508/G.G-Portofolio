@@ -7,7 +7,7 @@
       background-color: $blue;
       color: $white;
       &::after {
-        color: $white;// TODO 
+        color: $white;// TODO: change the icon color
       }
       &:not(.colapsed)::after {
         color: $white;

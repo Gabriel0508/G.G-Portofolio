@@ -118,7 +118,7 @@ html {
   opacity: 1;
 }
 
-/*Img customisation*/
+/*projects-img customisation*/
 .project-img {
   width: 90%;
   border-radius: 0.2rem;
@@ -131,21 +131,49 @@ html {
   }
 }
 
-.footer {
-  .email {
-    display: none;
-    position: fixed;
-    writing-mode: vertical-rl;
-    bottom: 0;
-  }
-  .circle {
-    position: fixed;
-    display: none;
-    right: 0;
+// fullHD icon and email 
+.email {
+  display: none;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  position: fixed;
+  left: 5rem;
+  bottom: 0;
+  .email-text{
+    display: flex;
+    align-items: center;
+    writing-mode:vertical-rl;
+    letter-spacing: 0.1rem;
+    &:hover {
+      color: $light-blue;
+    }
+    &::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 5rem;
+    margin-top: 1.6rem;
+    background-color: $light-blue;
+    }
   }
 }
 
+.circle {
+  display: none;
+  position: fixed;
+  display: none;
+  right: 0;
+  bottom: -15rem;
+}
+
 /*Responsive*/
+@media screen and (max-width: 900px) {
+  .project-img {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 1240px) {
   .font-size-1 {
     font-size: 3rem;
@@ -169,12 +197,10 @@ html {
 }
 
 @media screen and (min-width: 1600px) {
-  .footer {
-    .email {
-      display: block;
-    }
-    .circle {
-      display: block;
-    }
+  .email {
+     display: flex;
+  }
+  .circle {
+     display: block;
   }
 }

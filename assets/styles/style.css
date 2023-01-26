@@ -94,8 +94,8 @@ nav .container-fluid .nav-active {
   transform: translateX(0%);
 }
 
-p {
-  margin-bottom: none !important;
+.home {
+  overflow: hidden;
 }
 
 .profile-photo {
@@ -169,7 +169,7 @@ html {
   background-color: #040317;
   color: #41c1fd;
   padding: 0.6rem 1rem;
-  border-radius: 2%;
+  border-radius: 0.2rem;
   transition: all 0.15s ease-in-out;
 }
 .button-nav:hover {
@@ -259,7 +259,7 @@ html {
   opacity: 1;
 }
 
-/*Img customisation*/
+/*projects-img customisation*/
 .project-img {
   width: 90%;
   border-radius: 0.2rem;
@@ -272,20 +272,47 @@ html {
   -webkit-filter: blur(0);
 }
 
-.footer .email {
+.email {
   display: none;
+  flex-direction: column;
+  align-items: center;
   position: fixed;
-  -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
+  left: 5rem;
   bottom: 0;
 }
-.footer .circle {
+.email .email-text {
+  display: flex;
+  align-items: center;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  letter-spacing: 0.1rem;
+}
+.email .email-text:hover {
+  color: #41c1fd;
+}
+.email .email-text::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 5rem;
+  margin-top: 1.6rem;
+  background-color: #41c1fd;
+}
+
+.circle {
+  display: none;
   position: fixed;
   display: none;
   right: 0;
+  bottom: -15rem;
 }
 
 /*Responsive*/
+@media screen and (max-width: 900px) {
+  .project-img {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1240px) {
   .font-size-1 {
     font-size: 3rem;
@@ -304,10 +331,10 @@ html {
   }
 }
 @media screen and (min-width: 1600px) {
-  .footer .email {
-    display: block;
+  .email {
+    display: flex;
   }
-  .footer .circle {
+  .circle {
     display: block;
   }
 }/*# sourceMappingURL=style.css.map */
