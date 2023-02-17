@@ -1,36 +1,19 @@
 @import "./navbar";
-@import "./home";
 @import "./about";
 @import "./experience";
 @import "./mixins";
 @import "./variables";
+@import "./home";
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-/*Bg-blurred on opening the menu*/
-.is-blurred {
-  filter: blur(0.1rem);
-  -webkit-filter: blur(0.1rem);
-  pointer-events: none;
-}
-
-/*Fullpage navigation*/
-#fp-nav ul li a span {
-  background-color: $blue;
-}
-
-/*Button*/
-.button-nav {
-  @include btn-border;
 }
 
 /* Scrollbar */
@@ -50,6 +33,28 @@ html {
 //Handle on hover
 ::-webkit-scrollbar-thumb:hover {
   background: $light-blue;
+}
+
+/*Bg-blurred on opening the menu*/
+.is-blurred {
+  filter: blur(0.1rem);
+  -webkit-filter: blur(0.1rem);
+  pointer-events: none;
+}
+
+/*Fullpage navigation*/
+#fp-nav ul li a span {
+  background-color: $blue;
+}
+
+//TODO: check it out
+.fp-is-overflow>.fp-overflow {
+  overflow-y: unset !important;
+}
+
+/*Button*/
+.button-nav {
+  @include btn-border;
 }
 
 //text-color
@@ -122,39 +127,40 @@ html {
 .project-img {
   width: 90%;
   border-radius: 0.2rem;
-  filter: blur(0.2rem);
-  -webkit-filter: blur(0.2rem);
-  transition: all 0.2s ease-in-out;
+  filter: drop-shadow(0.4rem 0.7rem 0.5rem $light-blue) invert(25%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border: 0.1em inset $light-blue;
   &:hover {
-    filter: blur(0);
-    -webkit-filter: blur(0);
+    filter: none;
   }
 }
 
-// fullHD icon and email 
+// fullHD icon and email
 .email {
   display: none;
   flex-direction: column;
-  -webkit-box-align: center;
   align-items: center;
   position: fixed;
   left: 5rem;
   bottom: 0;
-  .email-text{
+  .email-text {
     display: flex;
     align-items: center;
-    writing-mode:vertical-rl;
+    writing-mode: vertical-lr;
     letter-spacing: 0.1rem;
+    // text-orientation: upright;
+    font-size: 1rem;
     &:hover {
       color: $light-blue;
     }
     &::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 5rem;
-    margin-top: 1.6rem;
-    background-color: $light-blue;
+      content: "";
+      display: block;
+      width: 1px;
+      height: 4rem;
+      margin-top: 1rem;
+      background-color: $light-blue;
     }
   }
 }
@@ -164,13 +170,16 @@ html {
   position: fixed;
   display: none;
   right: 0;
-  bottom: -15rem;
+  bottom: -16rem;
 }
 
 /*Responsive*/
-@media screen and (max-width: 900px) {
-  .project-img {
-    width: 100%;
+@media screen and (min-width: 1700px) {
+  .email {
+    display: flex;
+  }
+  .circle {
+    display: block;
   }
 }
 
@@ -196,11 +205,8 @@ html {
   }
 }
 
-@media screen and (min-width: 1600px) {
-  .email {
-     display: flex;
-  }
-  .circle {
-     display: block;
+@media screen and (max-width: 900px) {
+  .project-img {
+    width: 100%;
   }
 }

@@ -1,3 +1,47 @@
 .home {
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1242px) {
+  .home {
+    height: 87vh;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .home {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .home {
+    height: 52vh;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .home {
+    height: 55vh;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .home {
+    height: 75vh;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .home {
+    height: 100vh;
+  }
 }
