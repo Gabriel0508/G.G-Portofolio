@@ -7,10 +7,10 @@
       background-color: $blue;
       color: $white;
       &::after {
-        color: $white;// TODO: change the icon color
+        color: $light-blue !important;
       }
       &:not(.colapsed)::after {
-        color: $white;
+        color: $light-blue !important;
       }
       &:focus {
         box-shadow: none !important;

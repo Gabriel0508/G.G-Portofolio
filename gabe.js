@@ -19,10 +19,10 @@ function showLinks() {
 
   //Animated the navlinks
   navLinks.forEach((link, index) => {
-    //if (link.style.animation) {
-    //  link.style.animation = "";
+    // if (link.style.animation) {
+    //   link.style.animation = ``;
     // } else {
-    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+      link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
     //}
   });
 }
@@ -42,7 +42,7 @@ function hideLinks() {
  * Method to close the menu on clicking outside of it
  */
 window.addEventListener("mouseup", function (event) {
-  if (event.target != links && event.target.parentNode != links) {
+  if (event.target !== links && event.target.parentNode !== links) {
     hideLinks();
   }
 });
@@ -56,7 +56,10 @@ const appearOptions = {
 };
 const faders = document.querySelectorAll(".fade-in");
 const sliders = document.querySelectorAll(".slide-in");
-const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+const appearOnScroll = new IntersectionObserver(function (
+  entries,
+  appearOnScroll
+) {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
       return;
@@ -82,16 +85,16 @@ sliders.forEach((slider) => {
 new fullpage("#fullpage", {
   licenseKey: "gplv3-license",
   autoScrolling: true,
-  sectionsColor: ['#040317', '#040317', '#040317', '#040317', '#040317'],
+  sectionsColor: ["#040317", "#040317", "#040317", "#040317", "#040317"],
   navigation: true,
   navigationPosition: "right",
   lazyLoading: true,
   scrollingSpeed: 1000,
   css3: true,
   keyboardScrolling: true,
-  credits: { enabled: false},
+  credits: { enabled: false },
   menu: ".nav-links",
   anchors: ["home", "about", "experience", "projects", "contact"],
   responsiveWidth: 1240,
-  afterResponsive: function(isResponsive){}
+  afterResponsive: function (isResponsive) {},
 });
