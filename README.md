@@ -5,7 +5,6 @@ for my portfolio I collaborated with a designer, Anda Gheorghe, who created my w
 
 https://xd.adobe.com/view/678b882e-e361-4d9e-5d4b-09c5f9db532f-11ba/
 
-psw: GabrielGrad#2023
 
 In creating this website I used the fullpage.js and Bootstrap library 
 
