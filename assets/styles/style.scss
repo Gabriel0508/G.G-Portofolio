@@ -1,9 +1,10 @@
 @import "./navbar";
+@import "./home";
 @import "./about";
 @import "./experience";
+@import "./contact";
 @import "./mixins";
 @import "./variables";
-@import "./home";
 
 * {
   padding: 0;
@@ -127,7 +128,7 @@ html {
 .project-img {
   width: 90%;
   border-radius: 0.2rem;
-  filter: drop-shadow(0.4rem 0.7rem 0.5rem $light-blue) invert(25%);
+  filter: drop-shadow(0.2rem 0.2rem 0.4rem $light-blue) invert(25%);
   -webkit-transition: 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border: 0.1em inset $light-blue;

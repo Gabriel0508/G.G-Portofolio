@@ -1,0 +1,74 @@
+{
+    "navbar": {
+      "about": "Über",
+      "experience": "Erfahrung",
+      "projects": "Projekte",
+      "contact": "Kontakt",
+      "resume": "Lebenslauf"
+    },
+    "home": {
+      "greeting": "Hallo! Mein Name ist",
+      "name": "Gabriel Grad",
+      "about_me": "Ich interessiere mich für den Studiengang Web-Entwicklung",
+      "description": "Ich bin ein Angular-Entwickler, der sich für Angular/JavaScript interessiert und sich darauf konzentriert, schöne Interfaces und Erlebnisse zu entwickeln. Ich fühle mich bei der Arbeit mit Angular und JavaScript am wohlsten, wäre aber offen dafür, Java zu lernen, um in Zukunft eine Full-Stack-Rolle zu übernehmen."
+    },
+    "about": {
+      "title": "Über mich",
+      "description_one": "Meine Stärke ist die Arbeit mit Angular und JavaScript, aber seit ich meinen Weg in der Webentwicklung begonnen habe, bin ich daran interessiert, jeden Tag etwas Neues zu lernen und mein Wissen zu erweitern. Ich würde gerne Java lernen, um mich in naher Zukunft in eine Full-Stack-Rolle zu integrieren und hoffentlich meine Wege mit erstaunlichen Menschen zu kreuzen, die offen für Mentoring sind.",
+      "description_two": "Ich bin ein Angular-Entwickler, der sich für Angular/JavaScript interessiert und sich darauf konzentriert, schöne Interfaces und Erlebnisse zu bauen. Ich fühle mich bei der Arbeit mit Angular und JavaScript am wohlsten, wäre aber offen dafür, Java zu lernen, um mich in Zukunft in eine Full-Stack-Rolle zu integrieren."
+    },
+    "experience": {
+      "title": "Erfahrung",
+      "roles": {
+        "acessa_role": "Junior Software-Ingenieur",
+        "pb4_role": "Junior UI/Angular Developer"
+      },
+      "companies": {
+        "acessa": "@Acessa.eu",
+        "pb4": "@P4B Group"
+      },
+      "places": {
+        "acessa": "Cluj-Napoca, Rumänien",
+        "p4b": "Cluj-Napoca, Rumänien"
+      },
+      "job_description": {
+        "acessa": "Entwicklung von Schlüsselfunktionen und Wartung einer großen Webanwendung mit Angular",
+        "p4b_1": "Entwicklung von Schlüsselfunktionen und Wartung einer großen Webanwendung mit Angular",
+        "p4b_2": "Definierte und erforschte Produktfunktionen als Teil des Produktteams",
+        "p4b_3": "Designed and developed the Dashboard & Reports page for the customer-facing application by following a elaborate design",
+        "p4b_4": "Arbeitete eng mit BE-Entwicklern, Designern, Projektmanagern usw. als Teil eines agilen Teams zusammen",
+        "p4b_5": "Arbeitete an der Fehlerbehebung und Verbesserung der Anwendungsleistung",
+        "p4b_6": "Beitrag zur Verbesserung der Reaktionsfähigkeit der Anwendung auf mobilen Geräten"
+      },
+      "tools": {
+        "javascript": "JavaScript",
+        "html": "HTML",
+        "bootstrap": "Bootstrap",
+        "css": "CSS",
+        "sass": "SASS",
+        "angular": "Angular"
+      }
+    },
+    "projects": {
+      "title": "Einige Dinge, die ich gebaut habe",
+      "project_title": "Ausgewähltes Projekt",
+      "project_name_one": "Watches Magazine",
+      "description_1": "Es ist ein Projekt, das ich erstellt habe, um meine JavaScript-Kenntnisse zu verbessern und für das Styling habe ich nur Css verwendet",
+      "project_name_2": "Portofolio",
+      "description_2": "Es ist ein Projekt zur Verbesserung meiner JavaScript-Kenntnisse"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description_1": "Wenn Ihnen meine Arbeit gefallen hat und Sie ein Projekt starten möchten, bin ich offen für neue spannende Dinge! Kontaktieren Sie mich und ich melde mich so schnell wie möglich mit Details.",
+      "description_2": "Wenn Sie so freundlich sind, ein Feedback zu hinterlassen, teilen Sie einige Weisheiten mit mir, ich freue mich auf eine Verbindung!"
+    },
+    "buttons": {
+      "home_btn": "Sehen Sie sich meine Projekte an",
+      "about_btn": "Hallo sagen!"
+    },
+    "links": {
+      "developer": "Gabriel Grad",
+      "designer": "Anda Gheorghe"
+    }
+  }
+  
