@@ -1,302 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/images/gabe-logo.png">
-    <link rel="stylesheet" href="./assets/fonts/Inter/static/Inter-Regular.ttf">
-    <link rel="stylesheet" href="./assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/fontawesome-free-6.2.1-web/css/all.min.css">
-    <link rel="stylesheet" href="./assets/fullPage.js-master/fullPage.js-master/dist/fullpage.min.css">
-    <link rel="stylesheet" href="./assets/styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/gabe-logo.png" />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/Inter/static/Inter-Regular.ttf"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome-free-6.2.1-web/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fullPage.js-master/fullPage.js-master/dist/fullpage.min.css"
+    />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
     <title>Gabriel Grad</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--Navbar-->
-    <nav class="w-100 position-fixed px-2">
-        <div class="container-fluid d-flex align-items-center justify-content-between">
-            <div>
-                <a class="logo" href="./index.html">
-                    <img src="./assets/images/gabe-logo.png" alt="logo" />
-                </a>
-            </div>
-            <ul class="nav-links list-unstyled justify-content-between">
-                <li><a class="link-name font-size-4 text-decoration-none" data-menuanchor="about" href="#about"><span
-                            class="text-light-blue">01.</span>About</a></li>
-                <li><a class="link-name font-size-4 text-decoration-none" data-menuanchor="experience"
-                        href="#experience"><span class="text-light-blue">02.</span>Experience</a></li>
-                <li><a class="link-name font-size-4 text-decoration-none" data-menuanchor="projects"
-                        href="#projects"><span class="text-light-blue">03.</span>Projects</a></li>
-                <li><a class="link-name font-size-4 text-decoration-none" data-menuanchor="contact"
-                        href="#contact"><span class="text-light-blue">04.</span>Contact</a></li>
-                <li><a class="button-nav font-size-4 text-decoration-none"
-                        href="./assets/resume/Gabriel_Grad_-_Web_Developer.pdf" target="_blank">Resume</a></li>
-                <span class="icons w-100 justify-content-around">
-                    <li><a class="link-name text-decoration-none fs-4" href="https://www.instagram.com/gabrielgrad94/"
-                            target="_blank"><i class="fa-brands fa-square-instagram" title="Instagram"></i></a></li>
-                    <li><a class="link-name text-decoration-none fs-4" href="https://www.linkedin.com/in/gabriel0508/"
-                            target="_blank"><i class="fa-brands fa-linkedin" title="LinkedIn"></i></a></li>
-                    <li><a class="link-name text-decoration-none fs-4" href="https://github.com/Gabriel0508"
-                            target="_blank"><i class="fa-brands fa-github" title="Github"></i></a>
-                    </li>
-                    <li><a class="link-name text-decoration-none fs-4" href="mailto:gabrielgrad94@gmail.com"><i
-                                class="fa-solid fa-envelope" data-bs-toggle="tooltip" data-bs-placement="top"
-                                title="E-Mail"></i></a></li>
-                </span>
-            </ul>
-
-            <!--Menu-->
-            <div class="menu">
-                <div class="openMenu" onclick="showLinks()">
-                    <i class="fa-solid fa-bars font-size-3"></i>
-                </div>
-                <div class="closeMenu" onclick="hideLinks()">
-                    <i class="fa-sharp fa-solid fa-xmark font-size-3"></i>
-                </div>
-            </div>
+    <nav class="w-100 position-fixed">
+      <div
+        class="container-fluid d-flex align-items-center justify-content-between"
+      >
+        <div>
+          <a class="logo" href="./index.html">
+            <img src="./assets/images/gabe-logo.png" alt="logo" />
+          </a>
         </div>
+
+        <ul class="nav-links list-unstyled justify-content-between">
+          <li>
+            <a
+              class="link-name font-size-4 text-decoration-none"
+              data-menuanchor="about"
+              href="#about"
+              ><span class="text-light-blue">01.</span>About</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-name font-size-4 text-decoration-none"
+              data-menuanchor="experience"
+              href="#experience"
+              ><span class="text-light-blue">02.</span>Experience</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-name font-size-4 text-decoration-none"
+              data-menuanchor="projects"
+              href="#projects"
+              ><span class="text-light-blue">03.</span>Projects</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-name font-size-4 text-decoration-none"
+              data-menuanchor="contact"
+              href="#contact"
+              ><span class="text-light-blue">04.</span>Contact</a
+            >
+          </li>
+          <li>
+            <a
+              class="button-nav font-size-4 text-decoration-none"
+              href="./assets/resume/Gabriel_Grad_-_Web_Developer.pdf"
+              target="_blank"
+              >Resume</a
+            >
+          </li>
+          <span class="icons w-100 justify-content-around">
+            <li>
+              <a
+                class="link-name text-decoration-none fs-4"
+                href="https://www.instagram.com/gabrielgrad94/"
+                target="_blank"
+                ><i class="fa-brands fa-square-instagram" title="Instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="link-name text-decoration-none fs-4"
+                href="https://www.linkedin.com/in/gabriel0508/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin" title="LinkedIn"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="link-name text-decoration-none fs-4"
+                href="https://github.com/Gabriel0508"
+                target="_blank"
+                ><i class="fa-brands fa-github" title="Github"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="link-name text-decoration-none fs-4"
+                href="mailto:gabrielgrad94@gmail.com"
+                ><i
+                  class="fa-solid fa-envelope"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="E-Mail"
+                ></i
+              ></a>
+            </li>
+          </span>
+        </ul>
+
+        <!--Menu-->
+        <div class="menu">
+          <div class="openMenu" onclick="showLinks()">
+            <i class="fa-solid fa-bars font-size-3"></i>
+          </div>
+          <div class="closeMenu" onclick="hideLinks()">
+            <i class="fa-sharp fa-solid fa-xmark font-size-3"></i>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <main id="fullpage">
-        <!--Home-->
-        <section class="section active">
-            <div class="container fade-in home">
-                <p class="text-light-blue font-size-3">Hello! My name is</p>
-                <p class="text-white fw-bold font-size-1">Gabriel Grad</p>
-                <p class="text-blue fw-bold font-size-2 mb-0">I'm interested in the Web Development path.</p>
-                <p class="mt-3 text-extra-light-blue font-size-3 mb-0">I am a Angular Developer who is interested in
-                    Angular/JavaScript and focused on
-                    building beautiful interfaces and experiences.
-                    I am most comfortable working with Angular and JavaScript, however, I would be open to learning
-                    Java to integrate into a full stack role in future.
-                </p>
-                <div class="mt-5">
-                    <a class="button-nav font-size-4 text-decoration-none" href="https://github.com/Gabriel0508"
-                        title="Github" target="_blank">Check out my projects</a>
-                </div>
-            </div>
-        </section>
+      <!--Home-->
+      <section class="section active">
+        <div class="container fade-in home">
+          <p class="text-light-blue font-size-3">Hello! My name is</p>
+          <p class="text-white fw-bold font-size-1">Gabriel Grad</p>
+          <p class="text-blue fw-bold font-size-2 mb-0">
+            I'm interested in the Web Development path.
+          </p>
+          <p class="mt-3 text-extra-light-blue font-size-3 mb-0">
+            I am a Angular Developer who is interested in As an up-and-coming
+            web developer, I am passionate about creating visually appealing and
+            highly functional websites and user friendly web applications. With
+            a solid understanding HTML, CSS, and JavaScript acquired over the
+            past years, I am committed to continuous learning and growth, always
+            seeking out new technologies and approaches to enhance my skills and
+            deliver exceptional results.
+          </p>
+          <div class="mt-5">
+            <a
+              class="button-nav font-size-4 text-decoration-none"
+              href="https://github.com/Gabriel0508"
+              title="Github"
+              target="_blank"
+              >Check out my projects</a
+            >
+          </div>
+        </div>
+      </section>
 
-        <!--About-->
-        <section class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-6">
-                        <p class="fs-2 text-blue fade-in font-size-2"><span
-                                class="text-light-blue font-size-4">01.</span> About Me</p>
-                        <p class="mt-3 text-extra-light-blue fade-in font-size-4">My forte is working with Angular and
-                            JavaScript, however,
-                            since starting my path to Web Development,
-                            I'm interested in learning something new every day and expand my knowledge. I would like to
-                            learn Java
-                            to integrate into a full stack role in the near future and hopefully cross paths with
-                            amazing human beings, who are open for mentoring.
-                        </p>
-                        <p class="mt-3 text-extra-light-blue fade-in font-size-4">I am a Angular Developer who is
-                            interested in
-                            Angular/JavaScript and focused on
-                            building beautiful interfaces and experiences.
-                            I am most comfortable working with Angular and JavaScript, however, I would be open to
-                            learning Java to integrate into a full stack role in future.
-                        </p>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-6">
-                        <div class="text-center">
-                            <img class="profile-photo" src="./assets/images/profil.jpg" alt="profile-photo">
-                        </div>
-                    </div>
-                </div>
+      <!--About-->
+      <section class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6">
+              <p class="fs-2 text-blue fade-in font-size-2">
+                <span class="text-light-blue font-size-4">01.</span> About Me
+              </p>
+              <p class="mt-3 text-extra-light-blue fade-in font-size-4">
+                My forte is working with Angular and I am a developer based in
+                Romania who is extremely excited to be a part of the fast-paced
+                and dynamic world of web development. I'm a quick learner and a
+                dedicated problem-solver, and I'm always looking for ways to
+                improve my work and deliver high-quality results
+              </p>
+              <p class="mt-3 text-extra-light-blue fade-in font-size-4">
+                I love the thrill of solving complex problems and creating
+                something that's both functional and visually appealing. I am
+                most comfortable using Angular and JavaScript, however I'm eager
+                to learn other languages and frameworks, such as Java, that can
+                help me become a more well-rounded developer and make a smooth
+                integration into a full-stack role. I'm always happy to receive
+                feedback, learn from others and connect with like-minded
+                individuals who share my passion for web development.
+              </p>
             </div>
-        </section>
-
-        <!--Experience-->
-        <section class="section text-light">
-            <div class="container">
-                <p class="text-blue fade-in font-size-2"><span class="font-size-4 text-light-blue">02.</span> Experience
-                </p>
-                <div class="accordion accordion-flush mt-3 fade-in" id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <div class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed font-size-3 text-blue" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                aria-controls="flush-collapseOne">
-                                Junior Software Engineer <span class="mx-3">@Accesa.eu</span>
-                                <!--TODO: add start and end collaboration date overall-->
-                            </button>
-                        </div>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse show mt-2"
-                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <p class="my-2 text-blue font-size-4">
-                                    <i class="fa-solid fa-location-dot text-light-blue mx-3"></i>Cluj-Napoca, Romania
-                                </p>
-                                <p class="text-extra-light-blue font-size-5"><i
-                                        class="text-light-blue fa-solid fa-caret-right mx-2"></i>
-                                    Developed key features and maintained a large web application using Angular
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item mt-2">
-                        <div class="accordion-header" id="flush-headingTwo">
-                            <button class="accordion-button collapsed font-size-3" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                aria-controls="flush-collapseTwo">
-                                Junior UI/Angular Developer <spna class="mx-3">@P4B Group</spna>
-                            </button>
-                        </div>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse mt-2"
-                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <p class="my-2 text-blue font-size-4"><i
-                                        class="fa-solid fa-location-dot text-light-blue mx-3"></i>Cluj-Napoca, Romania
-                                </p>
-                                <ul class="list-unstyled mt-3">
-                                    <li class="mt-2 text-extra-light-blue font-size-5"><i
-                                            class="fa-solid fa-caret-right text-light-blue mx-2"></i>Developed
-                                        key
-                                        features and maintained a large web application using Angular</li>
-                                    <li class="mt-2 text-extra-light-blue font-size-5"><i
-                                            class="fa-solid fa-caret-right text-light-blue mx-2"></i>Defined
-                                        and
-                                        researched product
-                                        features as part of the product team</li>
-                                    <li class="mt-2 text-extra-light-blue font-size-5"><i
-                                            class="fa-solid fa-caret-right text-light-blue mx-2"></i>Designed
-                                        and
-                                        developed the
-                                        Dashboard & Reports page for the customer-facing application
-                                        by following an elaborate design</li>
-                                    <li class="mt-2 text-extra-light-blue font-size-5"><i
-                                            class="fa-solid fa-caret-right text-light-blue mx-2"></i>Worked
-                                        closely
-                                        with BE
-                                        developers, designers, project managers, etc. as part of an Agile
-                                        team </li>
-                                    <li class="mt-2 text-extra-light-blue font-size-5"><i
-                                            class="fa-solid fa-caret-right text-light-blue mx-2"></i>Worked
-                                        on
-                                        bug
-                                        fixing and
-                                        improving application performance</li>
-                                    <li class="mt-2 text-extra-light-blue font-size-5"><i
-                                            class="fa-solid fa-caret-right text-light-blue mx-2"></i>Contributed
-                                        on
-                                        making the
-                                        application responsive on mobile devices</li>
-                                </ul>
-                                <div class="d-flex text-extra-light-blue font-size-5 justify-content-around">
-                                    <span>Angular</span>
-                                    <span>TypeScript</span>
-                                    <span>Bootstrap</span>
-                                    <span>SASS</span>
-                                    <span>Git</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-sm-12 col-md-12 col-lg-6">
+              <div class="text-center">
+                <img
+                  class="profile-photo"
+                  src="./assets/images/profil.jpg"
+                  alt="profile-photo"
+                />
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!--Projects-->
-        <section class="section">
-            <div class="container">
-                <p class="text-blue fade-in font-size-2"><span class="font-size-4 text-light-blue">03.</span> Some Things I've Built</p>
-                    <div class="row g-0 mt-3 fade-in">
-                            <div class="col-sm-12 col-md-12 col-lg-6">
-                                <a href="https://watches-online-magazine.netlify.app/" target="_blank">
-                                    <img class="project-img" src="./assets/images/watches.PNG" width="90%"
-                                        alt="watches-magazine">
-                                </a>
-                            </div>
-                            <div class="col-sm-12 col-md-12 col-lg-6"><!--TODO: align this col on the right-->
-                                <p class="text-light-blue font-size-4">Featured Project</p>
-                                <p class="text-white font-size-2">Watches Magazine</p>
-                                <p class="text-extra-light-blue mt-4 font-size-5">
-                                    It is a project created to improve my JavaScript skills and for styling I only used Css.
-                                </p>
-                                <div class="text-extra-light-blue d-flex w-50 justify-content-between mt-5 font-size-5">
-                                    <p>Html</p>
-                                    <p>Css</p>
-                                    <p>JavaScript</p>
-                                </div>
-                            </div>
-                    </div>
-                <div class="row g-0 mt-5 fade-in">
-                    <div class="col-sm-12 col-md-12 col-lg-6">
-                        <p class="text-light-blue font-size-4">Featured Project</p>
-                        <p class="text-white font-size-2">Portofolio</p>
-                        <p class="text-extra-light-blue font-size-5mt-4">
-                            It is a project created to improve my JavaScript skills
-                        </p>
-                        <div class="text-extra-light-blue d-flex w-50 justify-content-between mt-5 font-size-5">
-                            <p>Html</p>
-                            <p>Scss</p>
-                            <p>Bootstrap</p>
-                            <p>JavaScript</p>
-                        </div>
-                    </div>
-                    <div class="slide-in col-sm-12 col-md-12 col-lg-6">
-                        <a href="http://gabrielgrad.surge.sh/index.html" target="_blank">
-                            <img class="project-img" src="./assets/images/PORTOFOLIO.PNG" alt="todo">
-                        </a>
-                    </div>
+      <!--Experience-->
+      <section class="section text-light">
+        <div class="container">
+          <p class="text-blue fade-in font-size-2">
+            <span class="font-size-4 text-light-blue">02.</span> Experience
+          </p>
+          <div
+            class="accordion accordion-flush mt-3 fade-in"
+            id="accordionFlushExample"
+          >
+            <div class="accordion-item">
+              <div class="accordion-header" id="flush-headingOne">
+                <button
+                  class="accordion-button collapsed font-size-3 text-blue"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  Junior Software Engineer - Accesa.eu
+                </button>
+              </div>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse show mt-2"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <p class="my-2 text-white font-size-4">
+                    05.12.2022 - Present
+                  </p>
+                  <p class="text-extra-light-blue font-size-5">
+                    <i class="text-white fa-solid fa-circle me-2"></i>
+                    Developed key features and maintained a large web
+                    application using Angular
+                  </p>
+                  <div class="d-flex text-blue font-size-5">
+                    <span class="me-4">Angular</span>
+                    <span class="me-4">JavaScript / TypeScript</span>
+                    <span class="me-4">Bootstrap / Tailwind</span>
+                    <span class="me-4">Sass</span>
+                    <span>GitHub / GitLab</span>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
-
-        <!--Contact-->
-        <section class="section">
-            <div class="container">
-                <div class="text-center fade-in">
-                    <p class="text-blue font-size-2"><span class="font-size-4 text-light-blue">04.</span> Get In Touch
+            <div class="accordion-item mt-2">
+              <div class="accordion-header" id="flush-headingTwo">
+                <button
+                  class="accordion-button collapsed font-size-3"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  Junior UI/Angular Developer - P4B Group
+                </button>
+              </div>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse mt-2"
+                aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <p class="my-2 text-white font-size-4">
+                    08.07.2021 - 07.10.2022
+                  </p>
+                  <div class="list-unstyled mt-3">
+                    <p class="mt-2 text-extra-light-blue font-size-5">
+                      <i class="fa-solid fa-circle text-white me-2"></i
+                      >Developed key features and maintained a large web
+                      application using Angular
                     </p>
-                    <p class="mt-3 text-extra-light-blue font-size-4">
-                        If you enjoyed my work and want to start a project,
-                        I'm open to start new exciting stuff! Contact me and I'll get back to you as soon as posible
-                        with details.
+                    <p class="mt-2 text-extra-light-blue font-size-5">
+                      <i class="fa-solid fa-circle text-white me-2"></i>Defined
+                      and researched product features as part of the product
+                      team
                     </p>
-                    <p class="mt-3 text-extra-light-blue font-size-4">If you're kind enough to leave a feedback, share
-                        some wisdom
-                        with me, I'm happy to connect!</p>
-                    <div class="mt-5">
-                        <a class="button-nav text-decoration-none font-size-4" href="mailTo:gabrielgrad94@gmail.com">Say
-                            Hello</a>
-                    </div>
+                    <p class="mt-2 text-extra-light-blue font-size-5">
+                      <i class="fa-solid fa-circle text-white me-2"></i>Designed
+                      and developed the Dashboard & Reports page for the
+                      customer-facing application by following an elaborate
+                      design
+                    </p>
+                    <p class="mt-2 text-extra-light-blue font-size-5">
+                      <i class="fa-solid fa-circle text-white me-2"></i>Worked
+                      closely with BE developers, designers, project managers,
+                      etc. as part of an Agile team
+                    </p>
+                    <p class="mt-2 text-extra-light-blue font-size-5">
+                      <i class="fa-solid fa-circle text-white me-2"></i>Worked
+                      on bug fixing and improving application performance
+                    </p>
+                    <p class="mt-2 text-extra-light-blue font-size-5">
+                      <i class="fa-solid fa-circle text-white me-2"></i
+                      >Contributed on making the application responsive on
+                      mobile devices
+                    </p>
+                  </div>
+                  <div class="d-flex text-blue font-size-5">
+                    <span class="me-4">Angular</span>
+                    <span class="me-4">TypeScript</span>
+                    <span class="me-4">Bootstrap / PrimeNG</span>
+                    <span class="me-4">Sass</span>
+                    <span>GitLab</span>
+                  </div>
                 </div>
-
-                <div class="d-flex w-100 justify-content-around mt-5">
-                    <div class="font-size-4">
-                        <i class="text-light-blue fa-sharp fa-solid fa-palette"></i>
-                        <a href="https://www.linkedin.com/in/anda-gheorghe/" target="_blank" title="LinkedIn"
-                            class="text-extra-light-blue text-decoration-none mx-1">Anda Gheorghe</a>
-                    </div>
-                    <div class="font-size-4">
-                        <i class="text-light-blue fa-sharp fa-solid fa-copyright"></i>
-                        <a href="https://www.linkedin.com/in/gabriel0508/" target="_blank" title="LinkedIn"
-                            class="text-extra-light-blue text-decoration-none mx-1">Gabriel Grad</a>
-                    </div>
-                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <!--Projects-->
+      <section class="section">
+        <div class="container">
+          <p class="text-blue fade-in font-size-2">
+            <span class="font-size-4 text-light-blue">03.</span>Projects
+          </p>
+          <div class="row mt-3 fade-in">
+            <div class="col-6">
+              <div class="text-white">
+                <i class="fa-sharp fa-solid fa-caret-right text-blue me-2"></i>
+                Website Portofolio
+              </div>
+              <p class="text-extra-light-blue mt-2">
+                This is a passion project, that provided me the opportunity to
+                expand my skill set in using CSS and JavaScript, and create my
+                first website portfolio at the same time. Throughout the full 3
+                weeks of development process, I focused on writing clean and
+                efficient JavaScript code, using best practices and design
+                patterns to ensure scalability and maintainability.
+                Additionally, I leveraged my knowledge of CSS to create a
+                visually appealing user interface that is both responsive and
+                accessible. By completing this project, I not only improved my
+                technical skills but also demonstrated my ability to deliver
+                high-quality code on a personal project. I am excited to
+                continue learning and growing as a developer and look forward to
+                applying my skills on future projects.
+              </p>
+            </div>
+            <div class="col-6">
+              <div class="text-white">
+                <i class="fa-sharp fa-solid fa-caret-right text-blue me-2"></i>
+                Watches Magazine
+              </div>
+              <p class="text-extra-light-blue mt-2">
+                This project is one of the first projects and was born out of a
+                desire to challenge myself and learn. Wathes Magazine served as
+                a valuable opportunity for me to enhance my JavaScript skills
+                and get better. While the website’s design may not have been the
+                primary focus, I utilized CSS to create a clear and structured
+                layout. It was a project that I worked on over the course of
+                several weeks, during which I was able to make steady progress
+                and significant improvements in my coding abilities. I am proud
+                of the hard work and dedication i put in this project, because
+                the skills I gained from this project have proven invaluable,
+                allowing me to tackle more complex projects and challenges with
+                confidence. Looking back, it serves as a reminder of my progress
+                and potential for growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Contact-->
+      <section class="section">
+        <div class="container">
+          <div class="text-center fade-in">
+            <p class="text-blue font-size-2">
+              <span class="font-size-4 text-light-blue">04.</span> Contact
+            </p>
+            <p class="mt-3 text-extra-light-blue font-size-4">
+              If you enjoyed my work, want to start a project or just looking
+              for an Angular developer who's passionate, communicative, curious,
+              and continuously looking for ways to improve then look no further.
+            </p>
+            <p class="mt-3 text-extra-light-blue font-size-4">
+              Say hello and let's connect!
+            </p>
+            <div class="mt-5">
+              <a
+                class="button-nav text-decoration-none font-size-4"
+                href="mailTo:gabrielgrad94@gmail.com"
+                >Say Hello</a
+              >
+            </div>
+          </div>
+
+          <div class="d-flex w-100 justify-content-around mt-5">
+            <div class="font-size-4">
+              <i class="text-light-blue fa-sharp fa-solid fa-palette"></i>
+              <a
+                href="https://www.linkedin.com/in/anda-gheorghe/"
+                target="_blank"
+                title="LinkedIn"
+                class="link-name text-decoration-none mx-1"
+                >Anda Gheorghe</a
+              >
+            </div>
+            <div class="font-size-4">
+              <i class="text-light-blue fa-sharp fa-solid fa-copyright"></i>
+              <a
+                href="https://www.linkedin.com/in/gabriel0508/"
+                target="_blank"
+                title="LinkedIn"
+                class="link-name text-decoration-none mx-1"
+                >Gabriel Grad</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <div class="email text-blue">
-         <a class="email-text text-decoration-none" href="mailTo:gabrielgrad94@gmail.com">gabrielgrad94@gmail.com</a>
-        </div>
+      <a
+        class="email-text text-decoration-none"
+        href="mailTo:gabrielgrad94@gmail.com"
+        >gabrielgrad94@gmail.com</a
+      >
     </div>
     <div class="circle">
-        <img src="./assets/images/circle-icon.svg" />
+      <img src="./assets/images/circle-icon.svg" />
     </div>
-
 
     <script src="./assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/fullPage.js-master/fullPage.js-master/dist/fullpage.min.js"></script>
     <script src="./gabe.js"></script>
-</body>
-
+  </body>
 </html>

@@ -6,12 +6,6 @@
     .accordion-button {
       background-color: $blue;
       color: $white;
-      &::after {
-        color: $light-blue !important;
-      }
-      &:not(.colapsed)::after {
-        color: $light-blue !important;
-      }
       &:focus {
         box-shadow: none !important;
       }

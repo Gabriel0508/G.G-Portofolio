@@ -1,0 +1,73 @@
+{
+  "navbar": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "home": {
+    "greeting": "Hello! My name is",
+    "name": "Gabriel Grad",
+    "about_me": "I'm interested in the Web Development path.",
+    "description": "I am a Angular Developer who is interested in Angular/JavaScript and focused on building beautiful interfaces and experiences. I am most comfortable working with Angular and JavaScript, however, I would be open to learning Java to integrate into a full stack role in future."
+  },
+  "about": {
+    "title": "About Me",
+    "description_one": "My forte is working with Angular and JavaScript, however, since starting my path to Web Development, I'm interested in learning something new every day and expand my knowledge. I would like to learn Java to integrate into a full stack role in the near future and hopefully cross paths with amazing human beings, who are open for mentoring.",
+    "description_two": "I am a Angular Developer who is interested in Angular/JavaScript and focused on building beautiful interfaces and experiences. I am most comfortable working with Angular and JavaScript, however, I would be open to learning Java to integrate into a full stack role in future."
+  },
+  "experience": {
+    "title": "Experience",
+    "roles": {
+      "acessa_role": "Junior Software Engineer",
+      "pb4_role": "Junior UI/Angular Developer"
+    },
+    "companies": {
+      "acessa": "@Acessa.eu",
+      "pb4": "@P4B Group"
+    },
+    "places": {
+      "acessa": "Cluj-Napoca, Romania",
+      "p4b": "Cluj-Napoca, Romania"
+    },
+    "job_description": {
+      "acessa": "Developed key features and maintained a large web application using Angular",
+      "p4b_1": "Developed key features and maintained a large web application using Angular",
+      "p4b_2": "Defined and researched product features as part of the product team",
+      "p4b_3": "Designed and developed the Dashboard & Reports page for the customer-facing application by following an elaborate design",
+      "p4b_4": "Worked closely with BE developers, designers, project managers, etc. as part of an Agile team",
+      "p4b_5": "Worked on bug fixing and improving application performance",
+      "p4b_6": "Contributed on making the application responsive on mobile devices"
+    },
+    "tools": {
+      "javascript": "JavaScript",
+      "html": "HTML",
+      "bootstrap": "Bootstrap",
+      "css": "CSS",
+      "sass": "SASS",
+      "angular": "Angular"
+    }
+  },
+  "projects": {
+    "title": "Some Things I've Built",
+    "project_title": "Featured Project",
+    "project_name_one": "Watches Magazine",
+    "description_1": "It is a project created to improve my JavaScript skills and for styling I only used Css.",
+    "project_name_2": "Portofolio",
+    "description_2": "It is a project created to improve my JavaScript skills"
+  },
+  "contact": {
+    "title": "Contact",
+    "description_1": "If you enjoyed my work and want to start a project, I'm open to start new exciting stuff! Contact me and I'll get back to you as soon as posible with details.",
+    "description_2": "If you're kind enough to leave a feedback, share some wisdom with me, I'm happy to connect!"
+  },
+  "buttons": {
+    "home_btn": "Check out my projects",
+    "about_btn": "Say Hello!"
+  },
+  "links": {
+    "developer": "Gabriel Grad",
+    "designer": "Anda Gheorghe"
+  }
+}
