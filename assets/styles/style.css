@@ -139,7 +139,7 @@ nav .container-fluid .nav-active {
      object-fit: cover;
   border-radius: 1%;
   border: 0.1rem solid #41c1fd;
-  filter: drop-shadow(0.4rem 1rem 0.5rem #41c1fd) invert(5%);
+  filter: drop-shadow(0.2rem 0.2rem 0.4rem #41c1fd) invert(5%);
   transition: all 0.5s ease;
 }
 .profile-photo:hover {
@@ -312,6 +312,24 @@ html {
   filter: none;
 }
 
+.col-container {
+  background-color: #f7faff;
+  height: 20rem;
+}
+.col-container .device-container {
+  width: 20rem;
+}
+.col-container .device-container .device-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.col-container .second-device {
+  bottom: 0rem;
+  right: 3rem;
+}
+
 .email {
   display: none;
   flex-direction: column;
@@ -376,5 +394,13 @@ html {
 @media screen and (max-width: 900px) {
   .project-img {
     width: 100%;
+  }
+  .col-container {
+    display: flex;
+    justify-content: center;
+    height: auto;
+  }
+  .col-container .second-device {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

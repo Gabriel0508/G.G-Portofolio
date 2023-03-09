@@ -85,10 +85,12 @@ sliders.forEach((slider) => {
 new fullpage("#fullpage", {
   licenseKey: "gplv3-license",
   autoScrolling: true,
+  fitToSection: true,
+  fitToSectionDelay: true,
+  navigationTooltips: ['Home', 'About', 'Experience', 'Projects', 'Contact'],
   sectionsColor: ["#040317", "#040317", "#040317", "#040317", "#040317"],
   navigation: true,
   navigationPosition: "right",
-  lazyLoading: true,
   scrollingSpeed: 1000,
   css3: true,
   keyboardScrolling: true,
@@ -96,5 +98,4 @@ new fullpage("#fullpage", {
   menu: ".nav-links",
   anchors: ["home", "about", "experience", "projects", "contact"],
   responsiveWidth: 1240,
-  afterResponsive: function (isResponsive) {},
 });
