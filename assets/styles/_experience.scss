@@ -12,6 +12,22 @@
     }
     .accordion-body {
       background-color: $blue-green;
+      .tech {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .accordion {
+    .accordion-item {
+      .accordion-body {
+        .tech {
+          display: none;
+        }
+      }
     }
   }
 }
