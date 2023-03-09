@@ -49,7 +49,7 @@ html {
 }
 
 //TODO: check it out
-.fp-is-overflow>.fp-overflow {
+.fp-is-overflow > .fp-overflow {
   overflow-y: unset !important;
 }
 
@@ -137,6 +137,24 @@ html {
   }
 }
 
+//Devices
+.col-container {
+  background-color: $white;
+  height: 20rem;
+  .device-container {
+    width: 20rem;
+    .device-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .second-device {
+    bottom: 0rem;
+    right: 3rem;
+  }
+}
+
 // fullHD icon and email
 .email {
   display: none;
@@ -166,6 +184,7 @@ html {
   }
 }
 
+//Circle on FullHD
 .circle {
   display: none;
   position: fixed;
@@ -209,5 +228,13 @@ html {
 @media screen and (max-width: 900px) {
   .project-img {
     width: 100%;
+  }
+  .col-container {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    .second-device {
+      display: none;
+    }
   }
 }

@@ -13,6 +13,12 @@
       rel="stylesheet"
       href="./assets/bootstrap-5.0.2-dist/css/bootstrap.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="./assets/bootstrap-5.0.2-dist/css/bootstrap-utilities.min.css"
+    />
+
     <link
       rel="stylesheet"
       href="./assets/fontawesome-free-6.2.1-web/css/all.min.css"
@@ -21,6 +27,8 @@
       rel="stylesheet"
       href="./assets/fullPage.js-master/fullPage.js-master/dist/fullpage.min.css"
     />
+    <link rel="stylesheet" href="device-mockups/device-mockups.min.css" />
+
     <link rel="stylesheet" href="./assets/styles/style.css" />
     <title>Gabriel Grad</title>
   </head>
@@ -107,12 +115,7 @@
               <a
                 class="link-name text-decoration-none fs-4"
                 href="mailto:gabrielgrad94@gmail.com"
-                ><i
-                  class="fa-solid fa-envelope"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  title="E-Mail"
-                ></i
+                ><i class="fa-solid fa-envelope" title="E-Mail"></i
               ></a>
             </li>
           </span>
@@ -134,8 +137,8 @@
       <!--Home-->
       <section class="section active">
         <div class="container fade-in home">
-          <p class="text-light-blue font-size-3">Hello! My name is</p>
-          <p class="text-white fw-bold font-size-1">Gabriel Grad</p>
+          <p class="text-light-blue font-size-3 mb-0">Hello! My name is</p>
+          <p class="text-white fw-bold font-size-1 mb-0">Gabriel Grad</p>
           <p class="text-blue fw-bold font-size-2 mb-0">
             I'm interested in the Web Development path.
           </p>
@@ -165,7 +168,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-6">
-              <p class="fs-2 text-blue fade-in font-size-2">
+              <p class="text-blue fade-in fw-bold font-size-2">
                 <span class="text-light-blue font-size-4">01.</span> About Me
               </p>
               <p class="mt-3 text-extra-light-blue fade-in font-size-4">
@@ -177,16 +180,15 @@
               </p>
               <p class="mt-3 text-extra-light-blue fade-in font-size-4">
                 I love the thrill of solving complex problems and creating
-                something that's both functional and visually appealing. I am
-                most comfortable using Angular and JavaScript, however I'm eager
-                to learn other languages and frameworks, such as Java, that can
-                help me become a more well-rounded developer and make a smooth
-                integration into a full-stack role. I'm always happy to receive
-                feedback, learn from others and connect with like-minded
+                something that's both functional and visually appealing. I'm
+                eager to learn other languages and frameworks, such as Java,
+                that can help me become a more well-rounded developer and make a
+                smooth integration into a full-stack role. I'm always happy to
+                receive feedback, learn from others and connect with like-minded
                 individuals who share my passion for web development.
               </p>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="col-sm-12 col-md-12 col-lg-6 fade-in">
               <div class="text-center">
                 <img
                   class="profile-photo"
@@ -202,31 +204,29 @@
       <!--Experience-->
       <section class="section text-light">
         <div class="container">
-          <p class="text-blue fade-in font-size-2">
+          <p class="text-blue fade-in fw-bold font-size-2">
             <span class="font-size-4 text-light-blue">02.</span> Experience
           </p>
-          <div
-            class="accordion accordion-flush mt-3 fade-in"
-            id="accordionFlushExample"
-          >
+          <!--Accordion-->
+          <div class="accordion" id="accordionExample">
             <div class="accordion-item">
-              <div class="accordion-header" id="flush-headingOne">
+              <h2 class="accordion-header" id="headingOne">
                 <button
-                  class="accordion-button collapsed font-size-3 text-blue"
+                  class="accordion-button font-size-3 text-blue"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseOne"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseOne"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
                 >
                   Junior Software Engineer - Accesa.eu
                 </button>
-              </div>
+              </h2>
               <div
-                id="flush-collapseOne"
-                class="accordion-collapse collapse show mt-2"
-                aria-labelledby="flush-headingOne"
-                data-bs-parent="#accordionFlushExample"
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
                   <p class="my-2 text-white font-size-4">
@@ -238,33 +238,31 @@
                     application using Angular
                   </p>
                   <div class="d-flex text-blue font-size-5">
-                    <span class="me-4">Angular</span>
-                    <span class="me-4">JavaScript / TypeScript</span>
-                    <span class="me-4">Bootstrap / Tailwind</span>
-                    <span class="me-4">Sass</span>
+                    <span class="me-2">Angular</span>
+                    <span class="me-2">Bootstrap/Tailwind</span>
                     <span>GitHub / GitLab</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="accordion-item mt-2">
-              <div class="accordion-header" id="flush-headingTwo">
+            <div class="accordion-item mt-1">
+              <h2 class="accordion-header" id="headingTwo">
                 <button
                   class="accordion-button collapsed font-size-3"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseTwo"
+                  data-bs-target="#collapseTwo"
                   aria-expanded="false"
-                  aria-controls="flush-collapseTwo"
+                  aria-controls="collapseTwo"
                 >
                   Junior UI/Angular Developer - P4B Group
                 </button>
-              </div>
+              </h2>
               <div
-                id="flush-collapseTwo"
-                class="accordion-collapse collapse mt-2"
-                aria-labelledby="flush-headingTwo"
-                data-bs-parent="#accordionFlushExample"
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
                   <p class="my-2 text-white font-size-4">
@@ -303,10 +301,9 @@
                     </p>
                   </div>
                   <div class="d-flex text-blue font-size-5">
-                    <span class="me-4">Angular</span>
-                    <span class="me-4">TypeScript</span>
-                    <span class="me-4">Bootstrap / PrimeNG</span>
-                    <span class="me-4">Sass</span>
+                    <span class="me-2">Angular</span>
+                    <span class="me-2">Bootstrap/PrimeNG</span>
+                    <span class="me-2">Sass</span>
                     <span>GitLab</span>
                   </div>
                 </div>
@@ -319,50 +316,131 @@
       <!--Projects-->
       <section class="section">
         <div class="container">
-          <p class="text-blue fade-in font-size-2">
+          <p class="text-blue fade-in fw-bold font-size-2">
             <span class="font-size-4 text-light-blue">03.</span>Projects
           </p>
-          <div class="row mt-3 fade-in">
-            <div class="col-6">
-              <div class="text-white">
-                <i class="fa-sharp fa-solid fa-caret-right text-blue me-2"></i>
-                Website Portofolio
+          <div class="row mt-3">
+            <div class="col-sm-12 col-lg-6 fade-in">
+              <div class="col-container position-relative p-1">
+                <div class="device-container">
+                  <div class="device-mockup imac">
+                    <div class="device">
+                      <div class="screen">
+                        <img
+                          src="./assets/images/website.PNG"
+                          alt="watches"
+                          class="device-img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="device-container position-absolute second-device">
+                  <div class="device-mockup macbock">
+                    <div class="device">
+                      <div class="screen">
+                        <img
+                          src="./assets/images/next.PNG"
+                          alt="watches"
+                          class="device-img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p class="text-extra-light-blue mt-2">
+
+              <div class="d-flex mt-3">
+                <p class="text-white">
+                  <i
+                    class="fa-sharp fa-solid fa-caret-right text-blue me-2"
+                  ></i>
+                  Website Portofolio
+                </p>
+
+                <a
+                  href="http://gabrielgrad.surge.sh/index.html#home"
+                  target="_blank"
+                  class="text-decoration-none link-name ms-4"
+                  ><i class="fa-solid fa-square-arrow-up-right"></i
+                ></a>
+
+                <a
+                  href="https://github.com/Gabriel0508/G.G-Portofolio"
+                  target="_blank"
+                  class="text-decoration-none link-name mx-3"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+              <p class="text-extra-light-blue mt-1">
                 This is a passion project, that provided me the opportunity to
                 expand my skill set in using CSS and JavaScript, and create my
-                first website portfolio at the same time. Throughout the full 3
-                weeks of development process, I focused on writing clean and
-                efficient JavaScript code, using best practices and design
-                patterns to ensure scalability and maintainability.
-                Additionally, I leveraged my knowledge of CSS to create a
-                visually appealing user interface that is both responsive and
-                accessible. By completing this project, I not only improved my
-                technical skills but also demonstrated my ability to deliver
-                high-quality code on a personal project. I am excited to
+                first website portfolio at the same time. I am excited to
                 continue learning and growing as a developer and look forward to
                 applying my skills on future projects.
               </p>
             </div>
-            <div class="col-6">
-              <div class="text-white">
-                <i class="fa-sharp fa-solid fa-caret-right text-blue me-2"></i>
-                Watches Magazine
+
+            <div class="col-sm-12 col-lg-6 fade-in">
+              <div class="col-container p-1 position-relative">
+                <div class="device-container">
+                  <div class="device-mockup imac">
+                    <div class="device">
+                      <div class="screen">
+                        <img
+                          src="./assets/images/watches.PNG"
+                          alt="watches"
+                          class="device-img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="device-container position-absolute second-device">
+                  <div class="device-mockup macbock">
+                    <div class="device">
+                      <div class="screen">
+                        <img
+                          src="./assets/images/watches-web.PNG"
+                          alt="watches"
+                          class="device-img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p class="text-extra-light-blue mt-2">
+
+              <div class="d-flex mt-3">
+                <p class="text-white">
+                  <i
+                    class="fa-sharp fa-solid fa-caret-right text-blue me-2"
+                  ></i>
+                  Watches Magazine
+                </p>
+
+                <a
+                  href="https://watches-online-magazine.netlify.app/"
+                  target="_blank"
+                  class="text-decoration-none link-name ms-4"
+                  ><i class="fa-solid fa-square-arrow-up-right"></i
+                ></a>
+
+                <a
+                  href="https://github.com/Gabriel0508/Watches-Magazine"
+                  target="_blank"
+                  class="text-decoration-none link-name mx-3"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+              <p class="text-extra-light-blue mt-1">
                 This project is one of the first projects and was born out of a
                 desire to challenge myself and learn. Wathes Magazine served as
                 a valuable opportunity for me to enhance my JavaScript skills
-                and get better. While the website’s design may not have been the
-                primary focus, I utilized CSS to create a clear and structured
-                layout. It was a project that I worked on over the course of
-                several weeks, during which I was able to make steady progress
-                and significant improvements in my coding abilities. I am proud
-                of the hard work and dedication i put in this project, because
-                the skills I gained from this project have proven invaluable,
-                allowing me to tackle more complex projects and challenges with
-                confidence. Looking back, it serves as a reminder of my progress
-                and potential for growth.
+                and get better. Looking back, it serves as a reminder of my
+                progress and potential for growth.
               </p>
             </div>
           </div>
@@ -372,21 +450,21 @@
       <!--Contact-->
       <section class="section">
         <div class="container">
-          <div class="text-center fade-in">
-            <p class="text-blue font-size-2">
+          <div class="text-center">
+            <p class="text-blue fw-bold font-size-2 fade-in">
               <span class="font-size-4 text-light-blue">04.</span> Contact
             </p>
-            <p class="mt-3 text-extra-light-blue font-size-4">
+            <p class="mt-3 text-extra-light-blue font-size-4 fade-in">
               If you enjoyed my work, want to start a project or just looking
               for an Angular developer who's passionate, communicative, curious,
               and continuously looking for ways to improve then look no further.
             </p>
-            <p class="mt-3 text-extra-light-blue font-size-4">
+            <p class="mt-3 text-extra-light-blue font-size-4 fade-in">
               Say hello and let's connect!
             </p>
             <div class="mt-5">
               <a
-                class="button-nav text-decoration-none font-size-4"
+                class="button-nav text-decoration-none font-size-4 fade-in"
                 href="mailTo:gabrielgrad94@gmail.com"
                 >Say Hello</a
               >
@@ -431,6 +509,7 @@
     </div>
 
     <script src="./assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <script src="./assets/fullPage.js-master/fullPage.js-master/dist/fullpage.min.js"></script>
     <script src="./gabe.js"></script>
   </body>
