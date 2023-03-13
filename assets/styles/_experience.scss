@@ -12,6 +12,10 @@
     }
     .accordion-body {
       background-color: $blue-green;
+      .experience {
+        display: flex;
+        align-items: center;
+      }
       .tech {
         display: flex;
         align-items: center;
@@ -24,6 +28,21 @@
   .accordion {
     .accordion-item {
       .accordion-body {
+        .tech {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .accordion {
+    .accordion-item {
+      .accordion-body {
+        .experience {
+          display: block;
+        }
         .tech {
           display: none;
         }

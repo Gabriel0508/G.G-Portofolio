@@ -168,12 +168,24 @@ nav .container-fluid .nav-active {
 .accordion .accordion-item .accordion-body {
   background-color: #112240;
 }
+.accordion .accordion-item .accordion-body .experience {
+  display: flex;
+  align-items: center;
+}
 .accordion .accordion-item .accordion-body .tech {
   display: flex;
   align-items: center;
 }
 
 @media screen and (max-width: 545px) {
+  .accordion .accordion-item .accordion-body .tech {
+    display: none;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .accordion .accordion-item .accordion-body .experience {
+    display: block;
+  }
   .accordion .accordion-item .accordion-body .tech {
     display: none;
   }
