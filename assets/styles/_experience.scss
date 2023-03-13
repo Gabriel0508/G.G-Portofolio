@@ -24,7 +24,7 @@
   }
 }
 
-@media screen and (max-width: 545px) {
+@media screen and (max-width: 766px) {
   .accordion {
     .accordion-item {
       .accordion-body {
@@ -42,9 +42,6 @@
       .accordion-body {
         .experience {
           display: block;
-        }
-        .tech {
-          display: none;
         }
       }
     }

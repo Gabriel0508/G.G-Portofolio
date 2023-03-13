@@ -177,7 +177,7 @@ nav .container-fluid .nav-active {
   align-items: center;
 }
 
-@media screen and (max-width: 545px) {
+@media screen and (max-width: 766px) {
   .accordion .accordion-item .accordion-body .tech {
     display: none;
   }
@@ -185,9 +185,6 @@ nav .container-fluid .nav-active {
 @media screen and (max-width: 1240px) {
   .accordion .accordion-item .accordion-body .experience {
     display: block;
-  }
-  .accordion .accordion-item .accordion-body .tech {
-    display: none;
   }
 }
 .link-name {
