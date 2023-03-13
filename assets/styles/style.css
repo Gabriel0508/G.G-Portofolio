@@ -132,7 +132,11 @@ nav .container-fluid .nav-active {
     height: 100vh;
   }
 }
-.profile-photo {
+.row {
+  display: flex;
+  align-items: center;
+}
+.row .profile-photo {
   width: 50%;
   height: auto;
   -o-object-fit: cover;
@@ -142,12 +146,12 @@ nav .container-fluid .nav-active {
   filter: drop-shadow(0.2rem 0.2rem 0.4rem #41c1fd) invert(5%);
   transition: all 0.5s ease;
 }
-.profile-photo:hover {
+.row .profile-photo:hover {
   filter: none;
 }
 
 @media screen and (max-width: 991px) {
-  .profile-photo {
+  .row .profile-photo {
     width: 100%;
   }
 }
@@ -305,20 +309,6 @@ html {
 }
 
 .fade-in.appear {
-  opacity: 1;
-}
-
-.from-bottom {
-  transform: translateY(50%);
-}
-
-.from-bottom {
-  transition: opacity 100ms ease-in, transform 0.5s ease-in;
-  opacity: 0;
-}
-
-.from-bottom.appear {
-  transform: translateX(0);
   opacity: 1;
 }
 

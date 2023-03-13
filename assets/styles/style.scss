@@ -114,19 +114,19 @@ html {
   opacity: 1;
 }
 
-.from-bottom {
-  transform: translateY(50%);
-}
+// .from-bottom {
+//   transform: translateY(50%);
+// }
 
-.from-bottom {
-  transition: opacity 100ms ease-in, transform 0.5s ease-in;
-  opacity: 0;
-}
+// .from-bottom {
+//   transition: opacity 100ms ease-in, transform 0.5s ease-in;
+//   opacity: 0;
+// }
 
-.from-bottom.appear {
-  transform: translateX(0);
-  opacity: 1;
-}
+// .from-bottom.appear {
+//   transform: translateX(0);
+//   opacity: 1;
+// }
 
 /*projects-img customisation*/
 .project-img {

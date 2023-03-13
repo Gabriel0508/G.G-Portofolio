@@ -1,20 +1,26 @@
-.profile-photo {
-  width: 50%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 1%;
-  border: 0.1rem solid $light-blue;
-  filter: drop-shadow(.2rem .2rem .4rem $light-blue) invert(5%);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: all 0.5s ease;
-  &:hover {
-    filter: none;
+.row {
+  display: flex;
+  align-items: center;
+  .profile-photo {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1%;
+    border: 0.1rem solid $light-blue;
+    filter: drop-shadow(0.2rem 0.2rem 0.4rem $light-blue) invert(5%);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: all 0.5s ease;
+    &:hover {
+      filter: none;
+    }
   }
 }
 
 //Responsive
 @media screen and (max-width: 991px) {
-  .profile-photo {
-    width: 100%;
+  .row {
+    .profile-photo {
+      width: 100%;
+    }
   }
 }
